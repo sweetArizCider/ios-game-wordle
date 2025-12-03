@@ -2245,20 +2245,25 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mar-IP-LSj">
                                                 <rect key="frame" x="2" y="2" width="64" height="44"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-02_133335-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="uYC-UK-RDR">
-                                                        <rect key="frame" x="16" y="9.6666666666666305" width="32" height="24.666666666666671"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="uYC-UK-RDR" secondAttribute="height" multiplier="9:7" id="XO8-3L-Hef"/>
-                                                        </constraints>
-                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGQ-x7-fGl">
+                                                        <rect key="frame" x="18" y="0.0" width="28" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="O">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="uYC-UK-RDR" firstAttribute="width" secondItem="mar-IP-LSj" secondAttribute="width" multiplier="0.5" id="8r2-Ka-64X"/>
                                                     <constraint firstAttribute="height" constant="44" id="OUc-c5-Qu0"/>
                                                     <constraint firstAttribute="width" constant="64" id="VA5-38-bUz"/>
-                                                    <constraint firstItem="uYC-UK-RDR" firstAttribute="centerX" secondItem="mar-IP-LSj" secondAttribute="centerX" id="VcT-Fn-rod"/>
-                                                    <constraint firstItem="uYC-UK-RDR" firstAttribute="centerY" secondItem="mar-IP-LSj" secondAttribute="centerY" id="y6o-Cp-ydn"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -2529,6 +2534,8 @@
                         <outlet property="campo9" destination="LkE-oh-Tcz" id="lrH-cW-nSR"/>
                         <outlet property="tecla0" destination="YQa-YL-xIP" id="MJx-40-Lkp"/>
                         <outlet property="teclaA" destination="mxg-mO-hYK" id="eQD-aY-mdB"/>
+                        <outlet property="teclaB" destination="XOu-lx-3FB" id="7gV-RY-1xm"/>
+                        <outlet property="teclaC" destination="LzV-25-mRQ" id="cS9-Hr-juf"/>
                         <outlet property="teclaD" destination="PRS-fu-pxO" id="dGL-st-vfG"/>
                         <outlet property="teclaE" destination="Lfs-Z9-5CG" id="ANB-1j-2WP"/>
                         <outlet property="teclaF" destination="V0D-pT-y11" id="2BE-7K-K9f"/>
@@ -2538,6 +2545,8 @@
                         <outlet property="teclaJ" destination="Wzb-5M-Uo0" id="8uF-By-jhI"/>
                         <outlet property="teclaK" destination="Av8-MV-p9v" id="Xla-dk-9bf"/>
                         <outlet property="teclaL" destination="Igl-e9-oGU" id="EuN-aR-LT4"/>
+                        <outlet property="teclaM" destination="r0X-sQ-VaD" id="k10-hf-fa7"/>
+                        <outlet property="teclaN" destination="0yk-Kr-AKT" id="MV8-Ap-ZMT"/>
                         <outlet property="teclaO" destination="ewd-DY-1c4" id="qZi-xd-bio"/>
                         <outlet property="teclaP" destination="lJb-rU-Rbq" id="FG3-IL-jdx"/>
                         <outlet property="teclaQ" destination="YQa-YL-xIP" id="fTA-if-F6q"/>
@@ -2545,7 +2554,9 @@
                         <outlet property="teclaS" destination="OTC-FY-zqH" id="QyM-mg-E9A"/>
                         <outlet property="teclaT" destination="j0N-rd-QJq" id="6NF-Oz-GYo"/>
                         <outlet property="teclaU" destination="za5-Lx-pGy" id="xXd-on-4Ug"/>
+                        <outlet property="teclaV" destination="aR0-36-km3" id="BRj-8j-Sx4"/>
                         <outlet property="teclaW" destination="EGk-H9-v95" id="Fgf-Ij-t6J"/>
+                        <outlet property="teclaX" destination="VFe-v8-NRJ" id="3iY-1O-ogd"/>
                         <outlet property="teclaY" destination="Jp8-Ui-wjN" id="yUV-pG-p9k"/>
                         <outlet property="teclaZ" destination="EcN-t5-dIx" id="TAO-No-gjj"/>
                     </connections>
@@ -2561,7 +2572,6 @@
         <image name="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" width="910" height="274"/>
         <image name="Captura_de_pantalla_2025-12-01_191845-removebg-preview.png" width="399" height="396"/>
         <image name="Captura_de_pantalla_2025-12-02_131514-removebg-preview.png" width="330" height="308"/>
-        <image name="Captura_de_pantalla_2025-12-02_133335-removebg-preview.png" width="186" height="132"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
