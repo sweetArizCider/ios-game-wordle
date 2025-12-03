@@ -37,7 +37,6 @@ class ClassicModeViewController: UIViewController {
     @IBOutlet weak var campo18: UIButton!
     @IBOutlet weak var campo19: UIButton!
     
-    
     //teclado
     @IBOutlet weak var teclaQ: UIButton!
     @IBOutlet weak var teclaW: UIButton!
