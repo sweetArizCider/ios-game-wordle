@@ -62,6 +62,17 @@ class ClassicModeViewController: UIViewController {
     @IBOutlet weak var teclaB: UIButton!
     @IBOutlet weak var teclaN: UIButton!
     @IBOutlet weak var teclaM: UIButton!
+    @IBOutlet weak var teclaBorrar: UIButton!
+    
+    @IBOutlet weak var botonSubirRespuesta: UIButton!
+    
+    @IBOutlet weak var puntaje: UILabel!
+    
+    
+    @IBOutlet weak var vida2: UIImageView!
+    @IBOutlet weak var vida1: UIImageView!
+    @IBOutlet weak var vida3: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
