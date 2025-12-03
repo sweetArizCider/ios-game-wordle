@@ -306,11 +306,11 @@ class ClassicModeViewController: UIViewController {
     }
     
     func irAPantallaDeNombre() {
-        performSegue(withIdentifier: "NombreFlechaClasic", sender: self)
+        performSegue(withIdentifier: "NombreFlechaClassic", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "NombreFlechaClasic" {
+        if segue.identifier == "NombreFlechaClassic" {
             if let destino = segue.destination as? NombreViewController {
                 destino.puntajeFinal = puntajeActual
             }
