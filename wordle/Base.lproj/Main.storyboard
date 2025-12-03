@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ijv-zW-xke">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -156,9 +156,6 @@
                             <constraint firstItem="KnT-hM-md6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nm5-rO-ktB"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="Ijv-zW-xke" kind="presentation" identifier="classicMode" id="wyb-gG-xXT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,14 +690,14 @@
             <objects>
                 <viewController id="Ijv-zW-xke" customClass="ClassicModeViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EiH-pQ-OMU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Captura de pantalla 2025-12-01 192004.png" translatesAutoresizingMaskIntoConstraints="NO" id="hOQ-Pe-0lf">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXH-N4-NMX">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyQ-LL-MD3">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
@@ -760,7 +757,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fID-Gy-7YV">
-                                        <rect key="frame" x="61.666666666666657" y="776" width="270" height="56"/>
+                                        <rect key="frame" x="61.666666666666657" y="693" width="270" height="56"/>
                                         <color key="backgroundColor" red="1" green="0.93416827920000001" blue="0.71353709700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="0jK-6o-uQS"/>
@@ -778,7 +775,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zun-P5-QIJ">
-                                        <rect key="frame" x="180.66666666666666" y="712" width="32" height="48"/>
+                                        <rect key="frame" x="180.66666666666666" y="629" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOu-lx-3FB">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -812,7 +809,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsV-iU-7HO">
-                                        <rect key="frame" x="180.66666666666666" y="660" width="32" height="48"/>
+                                        <rect key="frame" x="180.66666666666666" y="577" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P1-Jy-dHp">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -846,7 +843,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IW0-rO-71w">
-                                        <rect key="frame" x="216.66666666666666" y="660" width="32" height="48"/>
+                                        <rect key="frame" x="216.66666666666666" y="577" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0M-bS-9RJ">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -880,7 +877,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeG-u3-TJl">
-                                        <rect key="frame" x="252.66666666666663" y="660" width="32" height="48"/>
+                                        <rect key="frame" x="252.66666666666663" y="577" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzb-5M-Uo0">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -914,7 +911,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8n-ht-Zs2">
-                                        <rect key="frame" x="288.66666666666669" y="660" width="32" height="48"/>
+                                        <rect key="frame" x="288.66666666666669" y="577" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Av8-MV-p9v">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -948,7 +945,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIO-Wk-ocT">
-                                        <rect key="frame" x="324.66666666666669" y="660" width="32" height="48"/>
+                                        <rect key="frame" x="324.66666666666669" y="577" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igl-e9-oGU">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -982,7 +979,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6B-4G-x0y">
-                                        <rect key="frame" x="144.66666666666666" y="660" width="32" height="48"/>
+                                        <rect key="frame" x="144.66666666666666" y="577" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0D-pT-y11">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1016,7 +1013,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-Yc-HZP">
-                                        <rect key="frame" x="162.66666666666666" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="162.66666666666666" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0N-rd-QJq">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1662,7 +1659,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-xn-3as">
-                                        <rect key="frame" x="198.66666666666666" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="198.66666666666666" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jp8-Ui-wjN">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1696,7 +1693,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrV-2h-xFJ">
-                                        <rect key="frame" x="234.66666666666666" y="608" width="31.999999999999972" height="48"/>
+                                        <rect key="frame" x="234.66666666666666" y="525" width="31.999999999999972" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za5-Lx-pGy">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1730,7 +1727,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xO-uw-VIy">
-                                        <rect key="frame" x="270.66666666666669" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="270.66666666666669" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="719-mB-mTk">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1764,7 +1761,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6q-dU-kZ0">
-                                        <rect key="frame" x="306.66666666666669" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="306.66666666666669" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewd-DY-1c4">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1798,7 +1795,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fg0-aS-Olp">
-                                        <rect key="frame" x="126.66666666666669" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="126.66666666666669" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhG-1M-eRT">
                                                 <rect key="frame" x="1.9999999999999858" y="2" width="28" height="44"/>
@@ -1832,7 +1829,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPq-e3-tI1">
-                                        <rect key="frame" x="90.666666666666671" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="90.666666666666671" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfs-Z9-5CG">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1866,7 +1863,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lq-75-V2E">
-                                        <rect key="frame" x="54.666666666666657" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="54.666666666666657" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGk-H9-v95">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1900,7 +1897,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmF-d6-hBh">
-                                        <rect key="frame" x="18.666666666666671" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="18.666666666666671" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-YL-xIP">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1934,7 +1931,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyJ-12-rRz">
-                                        <rect key="frame" x="108.66666666666667" y="660" width="32.000000000000014" height="48"/>
+                                        <rect key="frame" x="108.66666666666667" y="577" width="32.000000000000014" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRS-fu-pxO">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -1968,7 +1965,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wec-kX-6qh">
-                                        <rect key="frame" x="72.666666666666671" y="660" width="32" height="48"/>
+                                        <rect key="frame" x="72.666666666666671" y="577" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTC-FY-zqH">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2002,7 +1999,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uY6-S4-lpo">
-                                        <rect key="frame" x="36.666666666666664" y="660" width="31.999999999999993" height="48"/>
+                                        <rect key="frame" x="36.666666666666664" y="577" width="31.999999999999993" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-mO-hYK">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2036,7 +2033,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40m-aW-Sxl">
-                                        <rect key="frame" x="216.66666666666666" y="712" width="32" height="48"/>
+                                        <rect key="frame" x="216.66666666666666" y="629" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yk-Kr-AKT">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2070,7 +2067,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-fS-Qrc">
-                                        <rect key="frame" x="144.66666666666666" y="712" width="32" height="48"/>
+                                        <rect key="frame" x="144.66666666666666" y="629" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-36-km3">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2104,7 +2101,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCB-WC-Pxj">
-                                        <rect key="frame" x="36.666666666666664" y="712" width="31.999999999999993" height="48"/>
+                                        <rect key="frame" x="36.666666666666664" y="629" width="31.999999999999993" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcN-t5-dIx">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2138,7 +2135,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiP-pG-qwV">
-                                        <rect key="frame" x="108.66666666666667" y="712" width="32.000000000000014" height="48"/>
+                                        <rect key="frame" x="108.66666666666667" y="629" width="32.000000000000014" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzV-25-mRQ">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2172,7 +2169,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2q-7v-uJU">
-                                        <rect key="frame" x="72.666666666666671" y="712" width="32" height="48"/>
+                                        <rect key="frame" x="72.666666666666671" y="629" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-v8-NRJ">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2206,7 +2203,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNX-st-wuR">
-                                        <rect key="frame" x="252.66666666666663" y="712" width="32" height="48"/>
+                                        <rect key="frame" x="252.66666666666663" y="629" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0X-sQ-VaD">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2240,30 +2237,32 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vld-tD-ILm">
-                                        <rect key="frame" x="288.66666666666669" y="712" width="68" height="48"/>
+                                        <rect key="frame" x="288.66666666666669" y="629" width="68" height="48"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mar-IP-LSj">
                                                 <rect key="frame" x="2" y="2" width="64" height="44"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGQ-x7-fGl">
-                                                        <rect key="frame" x="18" y="0.0" width="28" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGQ-x7-fGl">
+                                                        <rect key="frame" x="6" y="6" width="48.333333333333336" height="32"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="KGQ-x7-fGl" secondAttribute="height" multiplier="50:33" id="u6X-wO-VJ2"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="O">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="4"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
+                                                        <state key="normal" image="Captura_de_pantalla_2025-12-02_133335-removebg-preview.png"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="KGQ-x7-fGl" secondAttribute="bottom" constant="6" id="BBG-NK-QtQ"/>
+                                                    <constraint firstItem="KGQ-x7-fGl" firstAttribute="centerX" secondItem="mar-IP-LSj" secondAttribute="centerX" id="DcX-5P-Bmj"/>
                                                     <constraint firstAttribute="height" constant="44" id="OUc-c5-Qu0"/>
+                                                    <constraint firstItem="KGQ-x7-fGl" firstAttribute="leading" secondItem="mar-IP-LSj" secondAttribute="leading" constant="6" id="QlI-PG-FqK"/>
                                                     <constraint firstAttribute="width" constant="64" id="VA5-38-bUz"/>
+                                                    <constraint firstItem="KGQ-x7-fGl" firstAttribute="top" secondItem="mar-IP-LSj" secondAttribute="top" constant="6" id="myg-fx-V56"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KGQ-x7-fGl" secondAttribute="trailing" constant="6" id="qpH-M6-4qj"/>
+                                                    <constraint firstItem="KGQ-x7-fGl" firstAttribute="centerY" secondItem="mar-IP-LSj" secondAttribute="centerY" id="xIf-5n-0s8"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -2286,7 +2285,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDG-hV-8rA">
-                                        <rect key="frame" x="342.66666666666669" y="608" width="32" height="48"/>
+                                        <rect key="frame" x="342.66666666666669" y="525" width="32" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJb-rU-Rbq">
                                                 <rect key="frame" x="2" y="2" width="28" height="44"/>
@@ -2572,6 +2571,7 @@
         <image name="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" width="910" height="274"/>
         <image name="Captura_de_pantalla_2025-12-01_191845-removebg-preview.png" width="399" height="396"/>
         <image name="Captura_de_pantalla_2025-12-02_131514-removebg-preview.png" width="330" height="308"/>
+        <image name="Captura_de_pantalla_2025-12-02_133335-removebg-preview.png" width="186" height="132"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
