@@ -22,37 +22,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cz-gO-5GO">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF6-Il-n6w">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-01_191845-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="C9z-dp-aU6">
-                                                <rect key="frame" x="299.33333333333331" y="8.6666666666666714" width="81.666666666666686" height="68"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="C9z-dp-aU6" secondAttribute="height" multiplier="6:5" id="xXa-Xb-lTX"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pamelita33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTI-W2-8zh">
-                                                <rect key="frame" x="169.33333333333334" y="28" width="130.00000000000003" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="NlQ-H5-CCg"/>
-                                                    <constraint firstAttribute="width" constant="130" id="ieZ-ji-FXD"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <viewLayoutGuide key="safeArea" id="J1M-k0-9jF"/>
-                                        <color key="backgroundColor" red="0.56862745098039214" green="0.42352941176470588" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="C9z-dp-aU6" firstAttribute="centerY" secondItem="CTI-W2-8zh" secondAttribute="centerY" id="FHh-x4-JJl"/>
-                                            <constraint firstItem="J1M-k0-9jF" firstAttribute="trailing" secondItem="C9z-dp-aU6" secondAttribute="trailing" constant="12" id="OHe-ec-em6"/>
-                                            <constraint firstItem="C9z-dp-aU6" firstAttribute="height" secondItem="LF6-Il-n6w" secondAttribute="height" multiplier="0.8" id="bHw-Nt-44f"/>
-                                            <constraint firstAttribute="height" constant="85" id="erU-i8-y9H"/>
-                                            <constraint firstItem="C9z-dp-aU6" firstAttribute="centerY" secondItem="LF6-Il-n6w" secondAttribute="centerY" id="f1t-OM-2YZ"/>
-                                            <constraint firstItem="C9z-dp-aU6" firstAttribute="leading" secondItem="CTI-W2-8zh" secondAttribute="trailing" id="mZD-ya-yJp"/>
-                                        </constraints>
-                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="reD-eJ-pRz">
                                         <rect key="frame" x="19.666666666666657" y="85" width="353.66666666666674" height="100"/>
                                         <constraints>
@@ -69,7 +38,7 @@
                                         <state key="normal" title="Button" image="Captura_de_pantalla_2025-12-01_191635-removebg-preview.png"/>
                                         <connections>
                                             <action selector="EmpezarJuego:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QZQ-i4-AlF"/>
-                                            <segue destination="Qzm-w4-2hh" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="iEN-IX-FuE"/>
+                                            <segue destination="Qzm-w4-2hh" kind="presentation" id="iEN-IX-FuE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfY-wa-5To">
@@ -138,18 +107,15 @@
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="pD7-qx-930"/>
                                 <constraints>
-                                    <constraint firstItem="reD-eJ-pRz" firstAttribute="top" secondItem="LF6-Il-n6w" secondAttribute="bottom" id="1Io-J4-pln"/>
                                     <constraint firstItem="reD-eJ-pRz" firstAttribute="centerX" secondItem="3Cz-gO-5GO" secondAttribute="centerX" id="3Pl-LC-lju"/>
                                     <constraint firstItem="Edu-A7-oGc" firstAttribute="top" secondItem="bX5-1S-isf" secondAttribute="bottom" constant="8" id="7Ry-Pc-YFa"/>
-                                    <constraint firstItem="pD7-qx-930" firstAttribute="trailing" secondItem="LF6-Il-n6w" secondAttribute="trailing" id="8tU-zC-ak1"/>
                                     <constraint firstItem="CfY-wa-5To" firstAttribute="top" secondItem="Lfm-0c-PIB" secondAttribute="bottom" constant="16" id="BCX-fp-QXh"/>
-                                    <constraint firstItem="LF6-Il-n6w" firstAttribute="leading" secondItem="pD7-qx-930" secondAttribute="leading" id="Exj-TE-zpQ"/>
+                                    <constraint firstItem="reD-eJ-pRz" firstAttribute="top" secondItem="pD7-qx-930" secondAttribute="top" constant="85" id="FaS-fL-TZ9"/>
                                     <constraint firstItem="CfY-wa-5To" firstAttribute="centerX" secondItem="3Cz-gO-5GO" secondAttribute="centerX" id="IN1-rd-Ash"/>
                                     <constraint firstItem="Lfm-0c-PIB" firstAttribute="top" secondItem="reD-eJ-pRz" secondAttribute="bottom" constant="16" id="JLe-dY-21Z"/>
                                     <constraint firstItem="Edu-A7-oGc" firstAttribute="centerX" secondItem="3Cz-gO-5GO" secondAttribute="centerX" id="VHz-HC-9Dw"/>
                                     <constraint firstItem="Lfm-0c-PIB" firstAttribute="centerX" secondItem="3Cz-gO-5GO" secondAttribute="centerX" id="VWz-nm-1ga"/>
                                     <constraint firstItem="bX5-1S-isf" firstAttribute="centerX" secondItem="3Cz-gO-5GO" secondAttribute="centerX" id="gjy-gw-Lwb"/>
-                                    <constraint firstItem="LF6-Il-n6w" firstAttribute="top" secondItem="pD7-qx-930" secondAttribute="top" id="rEu-r9-OUn"/>
                                     <constraint firstItem="reD-eJ-pRz" firstAttribute="width" secondItem="3Cz-gO-5GO" secondAttribute="width" multiplier="0.9" id="uMv-sk-SIi"/>
                                     <constraint firstItem="Lfm-0c-PIB" firstAttribute="width" secondItem="3Cz-gO-5GO" secondAttribute="width" multiplier="0.6" id="yVF-a2-JeH"/>
                                     <constraint firstItem="bX5-1S-isf" firstAttribute="top" secondItem="CfY-wa-5To" secondAttribute="bottom" constant="8" id="zG6-85-mcw"/>
@@ -172,7 +138,6 @@
                     <connections>
                         <outlet property="botonPlay" destination="Lfm-0c-PIB" id="zD4-wt-YJM"/>
                         <outlet property="botonRecords" destination="CfY-wa-5To" id="uCL-jC-ZKQ"/>
-                        <outlet property="nombreUsuario" destination="CTI-W2-8zh" id="hfX-EA-Gl5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -2057,6 +2022,7 @@
                         <outlet property="vida1" destination="P4U-9C-ES9" id="8wW-oO-GAw"/>
                         <outlet property="vida2" destination="qLt-3d-jhc" id="IgI-zD-mJ0"/>
                         <outlet property="vida3" destination="qcQ-Lu-Whl" id="ACo-9O-gc3"/>
+                        <segue destination="GNf-XN-beZ" kind="presentation" identifier="NombreFlechaClassic" id="pWk-s3-pAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idn-6k-jex" sceneMemberID="firstResponder"/>
@@ -4177,7 +4143,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="botonSubirRespuesta" destination="7cC-le-gt9" id="Vgt-E9-fvN"/>
+                        <outlet property="botonSubir" destination="7cC-le-gt9" id="e2d-Jv-unz"/>
                         <outlet property="campo0" destination="LoR-yq-lwY" id="i7g-ZM-OiM"/>
                         <outlet property="campo1" destination="pI8-eo-Pda" id="127-Nl-34I"/>
                         <outlet property="campo10" destination="y8W-br-3I7" id="iqO-cI-OhT"/>
@@ -4206,37 +4172,38 @@
                         <outlet property="campo7" destination="364-7C-JFI" id="TTa-Ha-QbP"/>
                         <outlet property="campo8" destination="Cvj-H4-KVQ" id="VDg-PV-vhT"/>
                         <outlet property="campo9" destination="qVK-XR-gDg" id="gjr-GU-6YK"/>
-                        <outlet property="puntaje" destination="ayf-ZO-8N3" id="1e6-3F-J9t"/>
-                        <outlet property="teclaA" destination="DOu-RK-1Eb" id="d1x-k9-D7L"/>
-                        <outlet property="teclaB" destination="GjX-4q-wre" id="Ku7-2A-GMn"/>
-                        <outlet property="teclaBorrar" destination="z6H-qO-Kck" id="Muh-mw-Hxu"/>
-                        <outlet property="teclaC" destination="0Ib-5G-gvE" id="sqc-Z9-Rgg"/>
-                        <outlet property="teclaD" destination="zfb-GB-RFd" id="xPm-s2-Egz"/>
-                        <outlet property="teclaE" destination="N5Y-yc-doP" id="DqR-jX-Vse"/>
-                        <outlet property="teclaF" destination="r1X-N0-unV" id="fvo-Jx-CKn"/>
-                        <outlet property="teclaG" destination="CAw-Sp-SQ7" id="rzF-pD-QCo"/>
-                        <outlet property="teclaH" destination="DZ0-Ap-pHn" id="z3H-aY-YwI"/>
-                        <outlet property="teclaI" destination="Czm-iq-rep" id="QhJ-fM-gfk"/>
-                        <outlet property="teclaJ" destination="HAj-6n-egW" id="7yH-jv-W0B"/>
-                        <outlet property="teclaK" destination="NDB-hD-2Sg" id="i2v-WS-cle"/>
-                        <outlet property="teclaL" destination="r63-Xo-nyJ" id="W2G-3Y-W1h"/>
-                        <outlet property="teclaM" destination="dZr-sU-ueR" id="Ys6-4w-IWl"/>
-                        <outlet property="teclaN" destination="R5c-ay-h0v" id="5eL-vU-Vyn"/>
-                        <outlet property="teclaO" destination="pTh-Qb-ajY" id="mMb-L3-T6a"/>
-                        <outlet property="teclaP" destination="be2-tQ-JgV" id="b7q-9M-wvo"/>
-                        <outlet property="teclaQ" destination="g8R-43-ks7" id="xcn-df-qMs"/>
-                        <outlet property="teclaR" destination="41p-sc-oK3" id="HsN-bu-cMF"/>
-                        <outlet property="teclaS" destination="DHg-yu-44y" id="tTf-pY-nnn"/>
-                        <outlet property="teclaT" destination="3KG-Pe-Pwe" id="Aty-i2-fGp"/>
-                        <outlet property="teclaU" destination="sbK-2d-LX5" id="wQN-Qt-TFX"/>
-                        <outlet property="teclaV" destination="Sdv-ng-pcR" id="tDj-IK-t1B"/>
-                        <outlet property="teclaW" destination="Cf4-CI-btJ" id="DY7-eq-RWq"/>
-                        <outlet property="teclaX" destination="vCX-Wx-y1L" id="ffK-fC-1Wj"/>
-                        <outlet property="teclaY" destination="KYw-w4-E4r" id="dxz-L9-wuA"/>
-                        <outlet property="teclaZ" destination="1PN-P1-lLk" id="RoP-bY-je0"/>
-                        <outlet property="vida1" destination="ZJh-rY-zTG" id="2aV-vb-vfa"/>
-                        <outlet property="vida2" destination="0XV-Gy-iiB" id="Z1K-Lf-JJ8"/>
-                        <outlet property="vida3" destination="PLc-D8-jW3" id="b2r-eO-g1V"/>
+                        <outlet property="puntaje" destination="ayf-ZO-8N3" id="pQR-VW-NeJ"/>
+                        <outlet property="teclaA" destination="DOu-RK-1Eb" id="rej-RD-kkm"/>
+                        <outlet property="teclaB" destination="GjX-4q-wre" id="4CT-pF-NJD"/>
+                        <outlet property="teclaBack" destination="z6H-qO-Kck" id="jhI-X3-A4G"/>
+                        <outlet property="teclaC" destination="0Ib-5G-gvE" id="I50-iZ-S6H"/>
+                        <outlet property="teclaD" destination="zfb-GB-RFd" id="Cwc-il-vwe"/>
+                        <outlet property="teclaE" destination="N5Y-yc-doP" id="hj5-cZ-2c4"/>
+                        <outlet property="teclaF" destination="r1X-N0-unV" id="3nY-9i-o16"/>
+                        <outlet property="teclaG" destination="CAw-Sp-SQ7" id="DZT-mc-jvs"/>
+                        <outlet property="teclaH" destination="DZ0-Ap-pHn" id="mMT-Vq-J4v"/>
+                        <outlet property="teclaI" destination="Czm-iq-rep" id="qRU-Fd-cR9"/>
+                        <outlet property="teclaJ" destination="HAj-6n-egW" id="MTX-2c-TkG"/>
+                        <outlet property="teclaK" destination="NDB-hD-2Sg" id="uYd-0U-Q9I"/>
+                        <outlet property="teclaL" destination="r63-Xo-nyJ" id="fiW-ow-Xoi"/>
+                        <outlet property="teclaM" destination="dZr-sU-ueR" id="9hR-3B-m26"/>
+                        <outlet property="teclaN" destination="R5c-ay-h0v" id="f1t-qg-gOO"/>
+                        <outlet property="teclaO" destination="pTh-Qb-ajY" id="eKr-19-L5c"/>
+                        <outlet property="teclaP" destination="be2-tQ-JgV" id="UWC-d3-Jxv"/>
+                        <outlet property="teclaQ" destination="DFQ-9k-Kfn" id="xKc-eR-dKN"/>
+                        <outlet property="teclaR" destination="41p-sc-oK3" id="HBz-uM-iR8"/>
+                        <outlet property="teclaS" destination="DHg-yu-44y" id="dUN-cH-2Nm"/>
+                        <outlet property="teclaT" destination="3KG-Pe-Pwe" id="pcM-nn-MeN"/>
+                        <outlet property="teclaU" destination="sbK-2d-LX5" id="3Ps-SC-MEN"/>
+                        <outlet property="teclaV" destination="Sdv-ng-pcR" id="2dP-al-y6z"/>
+                        <outlet property="teclaW" destination="Cf4-CI-btJ" id="ODo-HB-50U"/>
+                        <outlet property="teclaX" destination="vCX-Wx-y1L" id="HV5-Cn-K4q"/>
+                        <outlet property="teclaY" destination="KYw-w4-E4r" id="ZBH-47-Rxz"/>
+                        <outlet property="teclaZ" destination="1PN-P1-lLk" id="ErP-zH-C1b"/>
+                        <outlet property="vida1" destination="PLc-D8-jW3" id="Pdf-IK-Zix"/>
+                        <outlet property="vida2" destination="0XV-Gy-iiB" id="DTK-6p-KzD"/>
+                        <outlet property="vida3" destination="ZJh-rY-zTG" id="cYM-i2-O7o"/>
+                        <segue destination="GNf-XN-beZ" kind="presentation" identifier="NombreFlechaHard" id="at9-np-CLG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7a-UL-d9D" sceneMemberID="firstResponder"/>
@@ -4248,14 +4215,14 @@
             <objects>
                 <viewController id="Qzm-w4-2hh" customClass="ViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E0O-u7-z0G">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Captura de pantalla 2025-12-01 192004.png" translatesAutoresizingMaskIntoConstraints="NO" id="sqd-Sa-2J7">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRL-dL-wJx">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="A2z-0s-Lh8">
                                         <rect key="frame" x="19.666666666666657" y="85" width="353.66666666666674" height="100"/>
@@ -4355,14 +4322,14 @@ Selecciona la dificultad</string>
             <objects>
                 <viewController id="GNf-XN-beZ" customClass="ViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0s-Nm-gvz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Captura de pantalla 2025-12-01 192004.png" translatesAutoresizingMaskIntoConstraints="NO" id="tmV-5b-Si3">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xz1-eW-F3m">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="nLF-2j-hUG">
                                         <rect key="frame" x="19.666666666666657" y="85" width="353.66666666666674" height="100"/>
@@ -4440,7 +4407,7 @@ Selecciona la dificultad</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLT-mR-vRM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="656"/>
+            <point key="canvasLocation" x="2434" y="25"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Ge-ac-p3e">
@@ -4485,31 +4452,11 @@ Si fallas los 4 intentos, no adivinaste la pabra y se te resta una vida.</string
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z62-Ru-Sgh">
-                                        <rect key="frame" x="61.666666666666657" y="573" width="270" height="56"/>
-                                        <color key="backgroundColor" red="0.98823529480000005" green="0.93725490570000003" blue="0.73725497719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="CFN-7k-35h"/>
-                                            <constraint firstAttribute="width" constant="270" id="iBa-A8-mJ3"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Aceptar">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="qQN-m6-CsR"/>
                                 <constraints>
                                     <constraint firstItem="9al-oO-NIO" firstAttribute="top" secondItem="dDJ-ll-QrA" secondAttribute="bottom" constant="32" id="0E2-4L-fpK"/>
-                                    <constraint firstItem="Z62-Ru-Sgh" firstAttribute="centerX" secondItem="dDJ-ll-QrA" secondAttribute="centerX" id="Klm-zZ-fyU"/>
                                     <constraint firstItem="9al-oO-NIO" firstAttribute="width" secondItem="F1y-Bm-eWL" secondAttribute="width" multiplier="0.8" id="Lqm-gh-T9W"/>
-                                    <constraint firstItem="Z62-Ru-Sgh" firstAttribute="top" secondItem="9al-oO-NIO" secondAttribute="bottom" constant="16" id="Nve-Ni-7dY"/>
                                     <constraint firstItem="9al-oO-NIO" firstAttribute="centerX" secondItem="F1y-Bm-eWL" secondAttribute="centerX" id="QPl-fM-Ij0"/>
                                     <constraint firstItem="dDJ-ll-QrA" firstAttribute="top" secondItem="qQN-m6-CsR" secondAttribute="top" constant="85" id="XXg-wP-grR"/>
                                     <constraint firstItem="dDJ-ll-QrA" firstAttribute="width" secondItem="F1y-Bm-eWL" secondAttribute="width" multiplier="0.9" id="dtG-4H-EJD"/>
@@ -4572,32 +4519,12 @@ Pamela Robledo Pinto
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXE-UY-lh0">
-                                        <rect key="frame" x="61.666666666666657" y="533" width="270" height="56"/>
-                                        <color key="backgroundColor" red="0.98823529480000005" green="0.93725490570000003" blue="0.73725497719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="UFf-ar-m0G"/>
-                                            <constraint firstAttribute="width" constant="270" id="qAY-mr-iOp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Aceptar">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="BXj-LH-Zf9"/>
                                 <constraints>
                                     <constraint firstItem="qjN-ig-OCD" firstAttribute="width" secondItem="SZl-Ug-OkW" secondAttribute="width" multiplier="0.9" id="0xn-W8-a4a"/>
                                     <constraint firstItem="qjN-ig-OCD" firstAttribute="top" secondItem="BXj-LH-Zf9" secondAttribute="top" constant="85" id="2aP-kk-vPu"/>
                                     <constraint firstItem="FO9-xz-iZT" firstAttribute="width" secondItem="SZl-Ug-OkW" secondAttribute="width" multiplier="0.8" id="EJu-Zl-lxG"/>
-                                    <constraint firstItem="vXE-UY-lh0" firstAttribute="centerX" secondItem="qjN-ig-OCD" secondAttribute="centerX" id="ILW-Uw-uSp"/>
-                                    <constraint firstItem="vXE-UY-lh0" firstAttribute="top" secondItem="FO9-xz-iZT" secondAttribute="bottom" constant="16" id="Zs2-VR-DdZ"/>
                                     <constraint firstItem="qjN-ig-OCD" firstAttribute="centerX" secondItem="SZl-Ug-OkW" secondAttribute="centerX" id="bUR-4g-pIf"/>
                                     <constraint firstItem="FO9-xz-iZT" firstAttribute="centerX" secondItem="SZl-Ug-OkW" secondAttribute="centerX" id="mM1-hT-ry6"/>
                                     <constraint firstItem="FO9-xz-iZT" firstAttribute="top" secondItem="qjN-ig-OCD" secondAttribute="bottom" constant="32" id="vhS-HA-2V9"/>
@@ -4636,37 +4563,6 @@ Pamela Robledo Pinto
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcT-sx-hqb">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgw-tm-gem">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-01_191845-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="p5Y-hi-sDd">
-                                                <rect key="frame" x="299.33333333333331" y="8.6666666666666643" width="81.666666666666686" height="68"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="p5Y-hi-sDd" secondAttribute="height" multiplier="6:5" id="Fcf-cy-Oel"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pamelita33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUO-eP-A1d">
-                                                <rect key="frame" x="169.33333333333334" y="28" width="130.00000000000003" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="130" id="53y-32-g9r"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="d8k-xJ-2gZ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <viewLayoutGuide key="safeArea" id="h8Z-zP-Oy2"/>
-                                        <color key="backgroundColor" red="0.56862745100000001" green="0.42352941179999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="p5Y-hi-sDd" firstAttribute="centerY" secondItem="Rgw-tm-gem" secondAttribute="centerY" id="KEL-N8-8O7"/>
-                                            <constraint firstItem="p5Y-hi-sDd" firstAttribute="centerY" secondItem="qUO-eP-A1d" secondAttribute="centerY" id="NzP-ii-Mjr"/>
-                                            <constraint firstAttribute="height" constant="85" id="XBY-iu-GyG"/>
-                                            <constraint firstItem="p5Y-hi-sDd" firstAttribute="leading" secondItem="qUO-eP-A1d" secondAttribute="trailing" id="cuT-ho-HOd"/>
-                                            <constraint firstItem="p5Y-hi-sDd" firstAttribute="height" secondItem="Rgw-tm-gem" secondAttribute="height" multiplier="0.8" id="esU-jv-2Xx"/>
-                                            <constraint firstItem="h8Z-zP-Oy2" firstAttribute="trailing" secondItem="p5Y-hi-sDd" secondAttribute="trailing" constant="12" id="p63-4e-I7J"/>
-                                        </constraints>
-                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ea-iD-VXf">
                                         <rect key="frame" x="19.666666666666657" y="85" width="353.66666666666674" height="100"/>
                                         <constraints>
@@ -4767,20 +4663,17 @@ Pamela Robledo Pinto
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="gzz-y5-nGP"/>
                                 <constraints>
-                                    <constraint firstItem="Rgw-tm-gem" firstAttribute="top" secondItem="gzz-y5-nGP" secondAttribute="top" id="5xY-sD-2x8"/>
                                     <constraint firstItem="4ea-iD-VXf" firstAttribute="width" secondItem="kcT-sx-hqb" secondAttribute="width" multiplier="0.9" id="7FW-gr-nOM"/>
                                     <constraint firstItem="gj6-mA-Vw2" firstAttribute="top" secondItem="Ypb-70-fn6" secondAttribute="bottom" constant="8" id="CuG-Bz-5wH"/>
                                     <constraint firstItem="GQo-UJ-ktf" firstAttribute="centerX" secondItem="HEI-pD-itu" secondAttribute="centerX" id="JN2-9T-5Vw"/>
                                     <constraint firstItem="4ea-iD-VXf" firstAttribute="centerX" secondItem="kcT-sx-hqb" secondAttribute="centerX" id="QHF-Qc-Dgo"/>
-                                    <constraint firstItem="4ea-iD-VXf" firstAttribute="top" secondItem="Rgw-tm-gem" secondAttribute="bottom" id="UYc-Je-CNv"/>
                                     <constraint firstItem="Ypb-70-fn6" firstAttribute="centerX" secondItem="kcT-sx-hqb" secondAttribute="centerX" id="ZpV-pG-ahg"/>
                                     <constraint firstItem="gj6-mA-Vw2" firstAttribute="centerX" secondItem="kcT-sx-hqb" secondAttribute="centerX" id="ane-ir-c8V"/>
-                                    <constraint firstItem="gzz-y5-nGP" firstAttribute="trailing" secondItem="Rgw-tm-gem" secondAttribute="trailing" id="cAt-HT-7QL"/>
                                     <constraint firstItem="x4h-Rf-b58" firstAttribute="top" secondItem="GQo-UJ-ktf" secondAttribute="bottom" constant="8" id="dWv-92-oGH"/>
                                     <constraint firstItem="HEI-pD-itu" firstAttribute="top" secondItem="gj6-mA-Vw2" secondAttribute="bottom" constant="8" id="ea9-9I-1RL"/>
+                                    <constraint firstItem="4ea-iD-VXf" firstAttribute="top" secondItem="gzz-y5-nGP" secondAttribute="top" constant="85" id="fm5-D1-VwQ"/>
                                     <constraint firstItem="Ypb-70-fn6" firstAttribute="top" secondItem="4ea-iD-VXf" secondAttribute="bottom" constant="40" id="h4F-eN-yAU"/>
                                     <constraint firstItem="x4h-Rf-b58" firstAttribute="centerX" secondItem="GQo-UJ-ktf" secondAttribute="centerX" id="jKg-Q2-5CL"/>
-                                    <constraint firstItem="Rgw-tm-gem" firstAttribute="leading" secondItem="gzz-y5-nGP" secondAttribute="leading" id="jbL-gK-STJ"/>
                                     <constraint firstItem="HEI-pD-itu" firstAttribute="centerX" secondItem="kcT-sx-hqb" secondAttribute="centerX" id="qcE-6f-TYz"/>
                                     <constraint firstItem="GQo-UJ-ktf" firstAttribute="top" secondItem="HEI-pD-itu" secondAttribute="bottom" constant="8" id="vFs-sd-wER"/>
                                 </constraints>
@@ -4801,7 +4694,6 @@ Pamela Robledo Pinto
                     </view>
                     <connections>
                         <outlet property="botonRecords" destination="Ypb-70-fn6" id="7VA-Ca-oZj"/>
-                        <outlet property="nombreUsuario" destination="qUO-eP-A1d" id="v0e-KS-Nzp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyr-rR-VMU" sceneMemberID="firstResponder"/>
@@ -4809,11 +4701,13 @@ Pamela Robledo Pinto
             <point key="canvasLocation" x="-995" y="-103"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pWk-s3-pAj"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Captura de pantalla 2025-12-01 192004.png" width="247.5" height="541.5"/>
         <image name="Captura_de_pantalla_2025-12-01_191635-removebg-preview.png" width="538" height="464"/>
         <image name="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" width="910" height="274"/>
-        <image name="Captura_de_pantalla_2025-12-01_191845-removebg-preview.png" width="399" height="396"/>
         <image name="Captura_de_pantalla_2025-12-02_131514-removebg-preview.png" width="330" height="308"/>
         <image name="Captura_de_pantalla_2025-12-02_133335-removebg-preview.png" width="186" height="132"/>
         <systemColor name="labelColor">

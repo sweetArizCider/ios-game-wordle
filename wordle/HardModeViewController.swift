@@ -9,6 +9,13 @@ import UIKit
 
 class HardModeViewController: UIViewController {
     
+    
+    @IBOutlet weak var vida1: UIImageView!
+    @IBOutlet weak var vida2: UIImageView!
+    @IBOutlet weak var vida3: UIImageView!
+    
+    @IBOutlet weak var puntaje: UILabel!
+    
     @IBOutlet weak var campo0: UIButton!
     @IBOutlet weak var campo1: UIButton!
     @IBOutlet weak var campo2: UIButton!
@@ -45,7 +52,37 @@ class HardModeViewController: UIViewController {
     
     
     
+    @IBOutlet weak var teclaQ: UIView!
+    @IBOutlet weak var teclaW: UIButton!
+    @IBOutlet weak var teclaE: UIButton!
+    @IBOutlet weak var teclaR: UIButton!
+    @IBOutlet weak var teclaT: UIButton!
+    @IBOutlet weak var teclaY: UIButton!
+    @IBOutlet weak var teclaU: UIButton!
+    @IBOutlet weak var teclaI: UIButton!
+    @IBOutlet weak var teclaO: UIButton!
+    @IBOutlet weak var teclaP: UIButton!
+    @IBOutlet weak var teclaA: UIButton!
+    @IBOutlet weak var teclaS: UIButton!
+    @IBOutlet weak var teclaD: UIButton!
+    @IBOutlet weak var teclaF: UIButton!
+    @IBOutlet weak var teclaG: UIButton!
+    @IBOutlet weak var teclaH: UIButton!
+    @IBOutlet weak var teclaJ: UIButton!
+    @IBOutlet weak var teclaK: UIButton!
+    @IBOutlet weak var teclaL: UIButton!
+    @IBOutlet weak var teclaZ: UIButton!
+    @IBOutlet weak var teclaX: UIButton!
+    @IBOutlet weak var teclaC: UIButton!
+    @IBOutlet weak var teclaV: UIButton!
+    @IBOutlet weak var teclaB: UIButton!
+    @IBOutlet weak var teclaN: UIButton!
+    @IBOutlet weak var teclaM: UIButton!
     
+    @IBOutlet weak var teclaBack: UIButton!
+    
+    
+    @IBOutlet weak var botonSubir: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
