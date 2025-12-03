@@ -4553,10 +4553,10 @@ Pamela Robledo Pinto
             </objects>
             <point key="canvasLocation" x="-1274" y="672"/>
         </scene>
-        <!--View Controller-->
+        <!--Records View Controller-->
         <scene sceneID="x5w-7B-4A9">
             <objects>
-                <viewController id="fIc-pd-mRq" customClass="ViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fIc-pd-mRq" customClass="RecordsViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3LP-Ph-CqI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4698,6 +4698,11 @@ Pamela Robledo Pinto
                     </view>
                     <connections>
                         <outlet property="botonRecords" destination="Ypb-70-fn6" id="7VA-Ca-oZj"/>
+                        <outlet property="top1" destination="Ypb-70-fn6" id="zIK-Lb-9eJ"/>
+                        <outlet property="top2" destination="gj6-mA-Vw2" id="Lj3-jm-aYN"/>
+                        <outlet property="top3" destination="HEI-pD-itu" id="wxt-uh-1ZG"/>
+                        <outlet property="top4" destination="GQo-UJ-ktf" id="g5I-v1-UF1"/>
+                        <outlet property="top5" destination="x4h-Rf-b58" id="eGm-FP-AJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyr-rR-VMU" sceneMemberID="firstResponder"/>
