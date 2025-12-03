@@ -4317,10 +4317,10 @@ Selecciona la dificultad</string>
             </objects>
             <point key="canvasLocation" x="749" y="-37"/>
         </scene>
-        <!--View Controller-->
+        <!--Nombre View Controller-->
         <scene sceneID="v5L-ih-Si1">
             <objects>
-                <viewController id="GNf-XN-beZ" customClass="ViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GNf-XN-beZ" customClass="NombreViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0s-Nm-gvz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4404,6 +4404,10 @@ Selecciona la dificultad</string>
                             <constraint firstItem="eo2-t6-euC" firstAttribute="trailing" secondItem="xz1-eW-F3m" secondAttribute="trailing" id="wnq-Rw-SbP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="botonAceptar" destination="j2J-2q-3xg" id="Bn7-uQ-wYq"/>
+                        <outlet property="campoNombre" destination="FWr-V1-MTf" id="bzs-JS-rkp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLT-mR-vRM" sceneMemberID="firstResponder"/>
             </objects>
