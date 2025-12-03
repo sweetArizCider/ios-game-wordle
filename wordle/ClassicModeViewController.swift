@@ -117,20 +117,46 @@ class ClassicModeViewController: UIViewController {
         posicionLetra = 0
         palabraUsuario = ""
         tiempoInicio = Date()
+        puntajeActual = 0
+        vidasRestantes = 3
+        
+        // Mostrar todas las vidas
+        vida1.isHidden = false
+        vida2.isHidden = false
+        vida3.isHidden = false
+        
+        // Actualizar puntaje
+        puntaje.text = "0"
         
         // Limpiar todos los campos
         limpiarCampos()
+        reiniciarTeclado()
     }
     
     func limpiarCampos() {
         for fila in camposBotones {
             for boton in fila {
                 boton.setTitle("", for: .normal)
-                boton.backgroundColor = UIColor.systemGray6
+                boton.backgroundColor = UIColor(hex: "#C4C4C4")
             }
         }
         palabraUsuario = ""
         posicionLetra = 0
+    }
+    
+    func reiniciarTeclado() {
+        let teclas = [
+            teclaQ, teclaW, teclaE, teclaR, teclaT,
+            teclaY, teclaU, teclaI, teclaO, teclaP,
+            teclaA, teclaS, teclaD, teclaF, teclaG,
+            teclaH, teclaJ, teclaK, teclaL, teclaZ,
+            teclaX, teclaC, teclaV, teclaB, teclaN, teclaM
+        ]
+        
+        for tecla in teclas {
+            tecla?.backgroundColor = UIColor.systemGray6
+            tecla?.isEnabled = true
+        }
     }
     
     // MARK: - Acciones del teclado
@@ -171,10 +197,10 @@ class ClassicModeViewController: UIViewController {
         // Primera pasada: verificar letras en posición correcta (verde)
         for i in 0..<5 {
             if palabraUsuarioArray[i] == palabraActualArray[i] {
-                camposBotones[intentoActual][i].backgroundColor = UIColor.systemGreen
+                camposBotones[intentoActual][i].backgroundColor = UIColor(hex: "#C6FFB6")
                 aciertos += 1
                 letrasUsadas[i] = true
-                cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor.systemGreen)
+                cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor(hex: "#C6FFB6"))
             }
         }
         
@@ -184,18 +210,18 @@ class ClassicModeViewController: UIViewController {
                 var encontrada = false
                 for j in 0..<5 where !letrasUsadas[j] {
                     if palabraUsuarioArray[i] == palabraActualArray[j] {
-                        camposBotones[intentoActual][i].backgroundColor = UIColor.systemYellow
+                        camposBotones[intentoActual][i].backgroundColor = UIColor(hex: "#FFEEB6")
                         letrasUsadas[j] = true
                         encontrada = true
-                        cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor.systemYellow)
+                        cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor(hex: "#FFEEB6"))
                         break
                     }
                 }
                 
-                // Si no se encontró, pintar de gris
+                // Si no se encontró, pintar de gris y deshabilitar
                 if !encontrada {
-                    camposBotones[intentoActual][i].backgroundColor = UIColor.systemGray
-                    cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor.systemGray)
+                    camposBotones[intentoActual][i].backgroundColor = UIColor(hex: "#C4C4C4")
+                    cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor(hex: "#C4C4C4"))
                 }
             }
         }
@@ -224,13 +250,21 @@ class ClassicModeViewController: UIViewController {
             teclaX, teclaC, teclaV, teclaB, teclaN, teclaM
         ]
         
+        let colorVerde = UIColor(hex: "#C6FFB6")
+        let colorAmarillo = UIColor(hex: "#FFEEB6")
+        let colorGris = UIColor(hex: "#C4C4C4")
+        
         for tecla in teclas {
             if tecla?.currentTitle == letra {
                 // Solo cambiar a verde si está verde, mantener verde sobre amarillo
-                if color == UIColor.systemGreen {
+                if color == colorVerde {
                     tecla?.backgroundColor = color
-                } else if tecla?.backgroundColor != UIColor.systemGreen {
+                } else if tecla?.backgroundColor != colorVerde {
                     tecla?.backgroundColor = color
+                    // Deshabilitar la tecla si es gris
+                    if color == colorGris {
+                        tecla?.isEnabled = false
+                    }
                 }
                 break
             }
@@ -254,7 +288,7 @@ class ClassicModeViewController: UIViewController {
         
         switch vidasRestantes {
         case 2:
-            vida3.isHidden = true
+            vida1.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe quedan 2 vidas") {
                 self.reiniciarIntento()
             }
@@ -264,7 +298,7 @@ class ClassicModeViewController: UIViewController {
                 self.reiniciarIntento()
             }
         case 0:
-            vida1.isHidden = true
+            vida3.isHidden = true
             mostrarAlerta(titulo: "Game Over", mensaje: "Perdiste todas tus vidas.\nPuntaje final: \(puntajeActual)") {
                 self.irAPantallaDeNombre()
             }
@@ -285,18 +319,19 @@ class ClassicModeViewController: UIViewController {
         palabraUsuario = ""
         tiempoInicio = Date()
         
-        // Limpiar campos
+        // Limpiar campos y reiniciar teclado
         limpiarCampos()
+        reiniciarTeclado()
     }
     
     func calcularPuntaje() {
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
         
         // Puntos base por intentos (menos intentos = más puntos)
-        let puntosPorIntentos = (4 - intentoActual) * 250
+        let puntosPorIntentos = (4 - intentoActual) * 50
         
         // Puntos por tiempo (más rápido = más puntos)
-        let puntosPorTiempo = max(0, 500 - tiempoTranscurrido * 5)
+        let puntosPorTiempo = max(0, 100 - tiempoTranscurrido)
         
         let puntosGanados = puntosPorIntentos + puntosPorTiempo
         puntajeActual += puntosGanados
@@ -329,6 +364,11 @@ class ClassicModeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Si viene de guardar el nombre, reiniciar el juego
+        if vidasRestantes == 0 || puntajeActual > 0 {
+            configurarJuego()
+        }
+        
         // Conectar acciones de las teclas
         let teclas = [
             teclaQ, teclaW, teclaE, teclaR, teclaT,
@@ -346,4 +386,21 @@ class ClassicModeViewController: UIViewController {
         botonSubirRespuesta.addTarget(self, action: #selector(subirRespuesta(_:)), for: .touchUpInside)
     }
 
+}
+
+// MARK: - Extensión UIColor para colores hex
+extension UIColor {
+    convenience init(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+        
+        var rgb: UInt64 = 0
+        Scanner(string: hexSanitized).scanHexInt64(&rgb)
+        
+        let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+        let blue = CGFloat(rgb & 0x0000FF) / 255.0
+        
+        self.init(red: red, green: green, blue: blue, alpha: 1.0)
+    }
 }
