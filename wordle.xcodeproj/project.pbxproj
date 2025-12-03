@@ -11,7 +11,6 @@
 		0418CA8B2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA892EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png */; };
 		0418CA8C2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA882EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png */; };
 		0418CA8D2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA8A2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png */; };
-		04D5DAFE2EDFB8D000E48DF1 /* copiaWordle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D5DAFD2EDFB8D000E48DF1 /* copiaWordle.storyboard */; };
 		04E395C02EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E395BF2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png */; };
 		04E395C12EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E395BE2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		0418CA882EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191635-removebg-preview.png"; sourceTree = "<group>"; };
 		0418CA892EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191754-removebg-preview.png"; sourceTree = "<group>"; };
 		0418CA8A2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191845-removebg-preview.png"; sourceTree = "<group>"; };
-		04D5DAFD2EDFB8D000E48DF1 /* copiaWordle.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = copiaWordle.storyboard; path = ../../../copias/copiaWordle.storyboard; sourceTree = "<group>"; };
 		04E395BE2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-02_131514-removebg-preview.png"; sourceTree = "<group>"; };
 		04E395BF2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-02_133335-removebg-preview.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +60,6 @@
 		0418CA592EDE78F900AB097C = {
 			isa = PBXGroup;
 			children = (
-				04D5DAFD2EDFB8D000E48DF1 /* copiaWordle.storyboard */,
 				0418CA642EDE78F900AB097C /* wordle */,
 				0418CA802EDE7B4A00AB097C /* Captura de pantalla 2025-12-01 192004.png */,
 				0418CA882EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png */,
@@ -148,7 +145,6 @@
 			files = (
 				0418CA822EDE7B4A00AB097C /* Captura de pantalla 2025-12-01 192004.png in Resources */,
 				0418CA8B2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png in Resources */,
-				04D5DAFE2EDFB8D000E48DF1 /* copiaWordle.storyboard in Resources */,
 				04E395C02EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png in Resources */,
 				04E395C12EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png in Resources */,
 				0418CA8C2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png in Resources */,
@@ -183,6 +179,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -214,6 +211,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +342,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
