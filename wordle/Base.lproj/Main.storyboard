@@ -2063,10 +2063,10 @@
             </objects>
             <point key="canvasLocation" x="1552" y="352"/>
         </scene>
-        <!--Classic Mode View Controller-->
+        <!--Hard Mode View Controller-->
         <scene sceneID="VSr-u8-AyL">
             <objects>
-                <viewController id="twN-EK-BHh" customClass="ClassicModeViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="twN-EK-BHh" customClass="HardModeViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uyY-6Y-aOd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4178,11 +4178,34 @@
                     </view>
                     <connections>
                         <outlet property="botonSubirRespuesta" destination="7cC-le-gt9" id="Vgt-E9-fvN"/>
-                        <outlet property="campo0" destination="pI8-eo-Pda" id="Dud-k2-mLc"/>
-                        <outlet property="campo1" destination="EaH-FF-QOb" id="YYa-6S-bVl"/>
-                        <outlet property="campo2" destination="xlt-xl-har" id="vUx-Ac-VHw"/>
-                        <outlet property="campo3" destination="wJ2-tY-5jI" id="D8A-hA-OIL"/>
-                        <outlet property="campo4" destination="BAi-9g-Pg3" id="UPS-kK-Ifn"/>
+                        <outlet property="campo0" destination="LoR-yq-lwY" id="i7g-ZM-OiM"/>
+                        <outlet property="campo1" destination="pI8-eo-Pda" id="127-Nl-34I"/>
+                        <outlet property="campo10" destination="y8W-br-3I7" id="iqO-cI-OhT"/>
+                        <outlet property="campo11" destination="0ea-Wl-1wC" id="P2i-RK-bMg"/>
+                        <outlet property="campo12" destination="ZFB-Jz-cBG" id="MIY-cb-m6c"/>
+                        <outlet property="campo13" destination="D4V-2r-mvZ" id="DjJ-CV-QYa"/>
+                        <outlet property="campo14" destination="YGm-4n-bGT" id="LxM-Y9-9T1"/>
+                        <outlet property="campo15" destination="eha-94-Kiv" id="ZyO-V8-HJP"/>
+                        <outlet property="campo16" destination="obx-n2-RoG" id="tqe-Mr-WGo"/>
+                        <outlet property="campo17" destination="r6O-kT-3Is" id="Oc3-zn-TBz"/>
+                        <outlet property="campo18" destination="XUX-YM-erz" id="s00-0j-nEl"/>
+                        <outlet property="campo19" destination="wNP-gN-VI4" id="nqU-Nj-iY4"/>
+                        <outlet property="campo2" destination="EaH-FF-QOb" id="J5M-kz-Pcx"/>
+                        <outlet property="campo20" destination="jh6-7e-S4u" id="iPa-YL-Vae"/>
+                        <outlet property="campo21" destination="Y4x-0Q-1E9" id="rct-YZ-ErV"/>
+                        <outlet property="campo22" destination="Exp-mM-Vj8" id="SYh-Kp-Kg5"/>
+                        <outlet property="campo23" destination="6Qg-3x-8IO" id="fwA-F5-qd2"/>
+                        <outlet property="campo24" destination="su8-DD-yiB" id="LDM-iT-7W7"/>
+                        <outlet property="campo25" destination="fo8-vy-tFS" id="PlY-0f-hdC"/>
+                        <outlet property="campo26" destination="QMJ-yC-pyJ" id="Pc9-kV-LW7"/>
+                        <outlet property="campo27" destination="Ywf-Mp-Wbt" id="zmi-Rp-BgC"/>
+                        <outlet property="campo3" destination="xlt-xl-har" id="0ZD-fZ-ZFy"/>
+                        <outlet property="campo4" destination="wJ2-tY-5jI" id="xs5-B5-9Ex"/>
+                        <outlet property="campo5" destination="BAi-9g-Pg3" id="e7n-9t-16n"/>
+                        <outlet property="campo6" destination="7AJ-be-ada" id="cBi-EZ-LZq"/>
+                        <outlet property="campo7" destination="364-7C-JFI" id="TTa-Ha-QbP"/>
+                        <outlet property="campo8" destination="Cvj-H4-KVQ" id="VDg-PV-vhT"/>
+                        <outlet property="campo9" destination="qVK-XR-gDg" id="gjr-GU-6YK"/>
                         <outlet property="puntaje" destination="ayf-ZO-8N3" id="1e6-3F-J9t"/>
                         <outlet property="teclaA" destination="DOu-RK-1Eb" id="d1x-k9-D7L"/>
                         <outlet property="teclaB" destination="GjX-4q-wre" id="Ku7-2A-GMn"/>
@@ -4218,7 +4241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7a-UL-d9D" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520" y="-373"/>
+            <point key="canvasLocation" x="1519.8473282442746" y="-373.23943661971833"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wsu-9m-SVB">
