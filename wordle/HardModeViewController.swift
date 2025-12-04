@@ -120,7 +120,7 @@ class HardModeViewController: UIViewController {
             [campo21, campo22, campo23, campo24, campo25, campo26, campo27]
         ]
         
-        configurarMusicaDeFondo()
+        // La música se configurará en viewWillAppear
         configurarJuego()
     }
     
@@ -175,7 +175,11 @@ class HardModeViewController: UIViewController {
     }
     
     func configurarMusicaDeFondo() {
-        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego", withExtension: "mp3") else { return }
+        // Detener cualquier reproductor existente
+        reproductorMusicaJuego?.stop()
+        reproductorMusicaJuego = nil
+        
+        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego 2", withExtension: "mp3") else { return }
         
         do {
             reproductorMusicaJuego = try AVAudioPlayer(contentsOf: urlMusica)

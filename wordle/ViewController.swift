@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurarMusicaDeFondo()
+        // La música se configurará en viewWillAppear
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +44,10 @@ class ViewController: UIViewController {
     }
     
     func configurarMusicaDeFondo() {
+        // Detener cualquier reproductor existente
+        reproductorMusica?.stop()
+        reproductorMusica = nil
+        
         guard let urlMusica = Bundle.main.url(forResource: "musicaMenu", withExtension: "mp3") else {
             print("⚠️ No se encontró musicaMenu 2.mp3")
             return

@@ -134,7 +134,7 @@ class ClassicModeViewController: UIViewController {
             [campo15, campo16, campo17, campo18, campo19]
         ]
         
-        configurarMusicaDeFondo()
+        // La música se configurará en viewWillAppear
         configurarJuego()
     }
     
@@ -189,7 +189,11 @@ class ClassicModeViewController: UIViewController {
     }
     
     func configurarMusicaDeFondo() {
-        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego", withExtension: "mp3") else { return }
+        // Detener cualquier reproductor existente
+        reproductorMusicaJuego?.stop()
+        reproductorMusicaJuego = nil
+        
+        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego 2", withExtension: "mp3") else { return }
         
         do {
             reproductorMusicaJuego = try AVAudioPlayer(contentsOf: urlMusica)
