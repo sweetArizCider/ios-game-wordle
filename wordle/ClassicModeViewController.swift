@@ -301,6 +301,7 @@ class ClassicModeViewController: UIViewController {
         let mensaje = "¡Felicidades! Adivinaste en \(intentoActual + 1) intentos.\nTiempo: \(tiempoTranscurrido)s\nPuntaje: \(puntajeActual)"
         
         mostrarAlerta(titulo: "¡Victoria!", mensaje: mensaje) {
+            // Ir a la pantalla de nombre (el puntaje ya está guardado en puntajeActual)
             self.irAPantallaDeNombre()
         }
     }
@@ -362,7 +363,6 @@ class ClassicModeViewController: UIViewController {
     }
     
     func irAPantallaDeNombre() {
-        debeReiniciar = true
         performSegue(withIdentifier: "NombreFlechaClassic", sender: self)
     }
     
