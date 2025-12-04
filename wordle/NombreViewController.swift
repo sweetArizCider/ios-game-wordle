@@ -34,8 +34,13 @@ class NombreViewController: UIViewController {
         // Ordenar los records de mayor a menor puntaje
         records.sort { $0.puntaje > $1.puntaje }
         
-        // Cerrar la vista directamente sin alerta
-        self.dismiss(animated: true, completion: nil)
+        // Cerrar la vista directamente
+        self.dismiss(animated: true) {
+            // Notificar a ClassicModeViewController que debe reiniciarse
+            if let presentingVC = self.presentingViewController as? ClassicModeViewController {
+                presentingVC.debeReiniciar = true
+            }
+        }
     }
     
     func mostrarAlerta(titulo: String, mensaje: String, completado: (() -> Void)? = nil) {
