@@ -21,5 +21,15 @@ class ViewController: UIViewController {
     @IBAction func EmpezarJuego(_ sender: UIButton) {
     }
     
+    @IBAction func verRecords(_ sender: UIButton) {
+    }
+    
+    @IBAction func verInstrucciones(_ sender: UIButton) {
+    }
+    
+    @IBAction func verCreditos(_ sender: UIButton) {
+    }
+    
+    
 }
 
