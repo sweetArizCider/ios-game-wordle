@@ -92,6 +92,7 @@ class ClassicModeViewController: UIViewController {
     var puntajeActual: Int = 0
     var tiempoInicio: Date?
     var palabraUsuario: String = ""
+    var debeReiniciar: Bool = false
     
     var camposBotones: [[UIButton]] = []
     
@@ -137,7 +138,7 @@ class ClassicModeViewController: UIViewController {
         for fila in camposBotones {
             for boton in fila {
                 boton.setTitle("", for: .normal)
-                boton.backgroundColor = UIColor(hex: "#C4C4C4")
+                boton.backgroundColor = UIColor.white
             }
         }
         palabraUsuario = ""
@@ -340,6 +341,7 @@ class ClassicModeViewController: UIViewController {
     }
     
     func irAPantallaDeNombre() {
+        debeReiniciar = true
         performSegue(withIdentifier: "NombreFlechaClassic", sender: self)
     }
     
@@ -365,8 +367,9 @@ class ClassicModeViewController: UIViewController {
         super.viewWillAppear(animated)
         
         // Si viene de guardar el nombre, reiniciar el juego
-        if vidasRestantes == 0 || puntajeActual > 0 {
+        if debeReiniciar {
             configurarJuego()
+            debeReiniciar = false
         }
         
         // Conectar acciones de las teclas

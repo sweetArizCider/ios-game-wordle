@@ -34,10 +34,10 @@ class NombreViewController: UIViewController {
         // Ordenar los records de mayor a menor puntaje
         records.sort { $0.puntaje > $1.puntaje }
         
-        // Mostrar confirmación y volver a ClassicModeViewController
+        // Mostrar confirmación y cerrar la vista
         mostrarAlerta(titulo: "¡Guardado!", mensaje: "Tu puntaje de \(puntajeFinal) ha sido registrado, \(nombre)") {
-            // Volver a ClassicModeViewController
-            self.navigationController?.popViewController(animated: true)
+            // Cerrar la vista actual y volver
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
