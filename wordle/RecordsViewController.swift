@@ -37,7 +37,7 @@ class RecordsViewController: UIViewController {
         let botones = [top1, top2, top3, top4, top5]
         
         for boton in botones {
-            boton?.contentHorizontalAlignment = .left
+            boton?.contentHorizontalAlignment = .center
             boton?.titleLabel?.numberOfLines = 1
             boton?.titleLabel?.adjustsFontSizeToFitWidth = true
         }
