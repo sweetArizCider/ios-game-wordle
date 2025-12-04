@@ -55,6 +55,7 @@ class HardModeViewController: UIViewController {
     @IBOutlet weak var campo27: UIButton!
     
     // Teclado
+    
     @IBOutlet weak var teclaQ: UIButton!
     @IBOutlet weak var teclaW: UIButton!
     @IBOutlet weak var teclaE: UIButton!

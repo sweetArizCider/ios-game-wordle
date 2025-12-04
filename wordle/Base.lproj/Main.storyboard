@@ -4190,7 +4190,7 @@
                         <outlet property="teclaN" destination="R5c-ay-h0v" id="f1t-qg-gOO"/>
                         <outlet property="teclaO" destination="pTh-Qb-ajY" id="eKr-19-L5c"/>
                         <outlet property="teclaP" destination="be2-tQ-JgV" id="UWC-d3-Jxv"/>
-                        <outlet property="teclaQ" destination="DFQ-9k-Kfn" id="xKc-eR-dKN"/>
+                        <outlet property="teclaQ" destination="g8R-43-ks7" id="j09-87-Mif"/>
                         <outlet property="teclaR" destination="41p-sc-oK3" id="HBz-uM-iR8"/>
                         <outlet property="teclaS" destination="DHg-yu-44y" id="dUN-cH-2Nm"/>
                         <outlet property="teclaT" destination="3KG-Pe-Pwe" id="pcM-nn-MeN"/>
@@ -4697,7 +4697,6 @@ Pamela Robledo Pinto
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="botonRecords" destination="Ypb-70-fn6" id="7VA-Ca-oZj"/>
                         <outlet property="top1" destination="Ypb-70-fn6" id="zIK-Lb-9eJ"/>
                         <outlet property="top2" destination="gj6-mA-Vw2" id="Lj3-jm-aYN"/>
                         <outlet property="top3" destination="HEI-pD-itu" id="wxt-uh-1ZG"/>
@@ -4711,7 +4710,7 @@ Pamela Robledo Pinto
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pWk-s3-pAj"/>
+        <segue reference="at9-np-CLG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Captura de pantalla 2025-12-01 192004.png" width="247.5" height="541.5"/>
