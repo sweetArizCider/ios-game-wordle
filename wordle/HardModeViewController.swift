@@ -490,7 +490,7 @@ class HardModeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        reproductorMusicaJuego?.pause()
+        reproductorMusicaJuego?.stop()
     }
 
 }
