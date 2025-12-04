@@ -6,15 +6,11 @@
 //
 
 import UIKit
-import AVFoundation
 
 // Variable global para almacenar el puntaje del modo difícil
 var puntajeParaGuardarHard: Int = 0
 
 class HardModeViewController: UIViewController {
-    
-    var reproductorSonido: AVAudioPlayer?
-    var reproductorMusicaJuego: AVAudioPlayer?
     
     @IBOutlet weak var vida1: UIImageView!
     @IBOutlet weak var vida2: UIImageView!
@@ -174,50 +170,9 @@ class HardModeViewController: UIViewController {
         }
     }
     
-    func configurarMusicaDeFondo() {
-        // Detener cualquier reproductor existente
-        reproductorMusicaJuego?.stop()
-        reproductorMusicaJuego = nil
-        
-        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego 2", withExtension: "mp3") else { return }
-        
-        do {
-            reproductorMusicaJuego = try AVAudioPlayer(contentsOf: urlMusica)
-            reproductorMusicaJuego?.numberOfLoops = -1
-            reproductorMusicaJuego?.volume = 0.3
-            reproductorMusicaJuego?.play()
-        } catch {
-            print("⚠️ Error al reproducir música de juego: \(error.localizedDescription)")
-        }
-    }
-    
-    func reproducirSonidoBoton() {
-        guard let urlSonido = Bundle.main.url(forResource: "musicaBotones", withExtension: "mp3") else { return }
-        
-        do {
-            reproductorSonido = try AVAudioPlayer(contentsOf: urlSonido)
-            reproductorSonido?.volume = 0.5
-            reproductorSonido?.play()
-        } catch {
-            print("⚠️ Error al reproducir sonido: \(error.localizedDescription)")
-        }
-    }
-    
-    func reproducirSonido(_ nombreArchivo: String) {
-        guard let urlSonido = Bundle.main.url(forResource: nombreArchivo, withExtension: "mp3") else { return }
-        
-        do {
-            reproductorSonido = try AVAudioPlayer(contentsOf: urlSonido)
-            reproductorSonido?.volume = 0.6
-            reproductorSonido?.play()
-        } catch {
-            print("⚠️ Error al reproducir \(nombreArchivo): \(error.localizedDescription)")
-        }
-    }
-    
     // MARK: - Acciones del teclado
     @IBAction func teclaPresionada(_ sender: UIButton) {
-        reproducirSonidoBoton()
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard intentoActual < 4, posicionLetra < 7 else { return }
         
         let letra = sender.currentTitle ?? ""
@@ -227,7 +182,7 @@ class HardModeViewController: UIViewController {
     }
     
     @IBAction func borrarLetra(_ sender: UIButton) {
-        reproducirSonidoBoton()
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard posicionLetra > 0 else { return }
         
         posicionLetra -= 1
@@ -236,7 +191,7 @@ class HardModeViewController: UIViewController {
     }
     
     @IBAction func subirRespuesta(_ sender: UIButton) {
-        reproducirSonidoBoton()
+        AudioManager.shared.reproducirSonido("musicaBotones")
         // Validar que se hayan ingresado 7 letras
         guard palabraUsuario.count == 7 else {
             mostrarAlerta(titulo: "Incompleto", mensaje: "Debes ingresar 7 letras")
@@ -310,9 +265,9 @@ class HardModeViewController: UIViewController {
         let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
         
         if tieneVerde || tieneAmarillo {
-            reproducirSonido("letraCorrecta")
+            AudioManager.shared.reproducirSonido("letraCorrecta 2", volumen: 0.6)
         } else {
-            reproducirSonido("error")
+            AudioManager.shared.reproducirSonido("error 2", volumen: 0.6)
         }
         
         // Verificar si ganó
@@ -362,8 +317,8 @@ class HardModeViewController: UIViewController {
     
     // MARK: - Lógica de juego
     func juegoGanado() {
-        reproductorMusicaJuego?.pause()
-        reproducirSonido("musicaGanador")
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaGanador 2", volumen: 0.6)
         calcularPuntaje()
         
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
@@ -382,21 +337,21 @@ class HardModeViewController: UIViewController {
     }
     
     func perderVida() {
-        reproductorMusicaJuego?.pause()
-        reproducirSonido("musicaPerdedor")
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaPerdedor 2", volumen: 0.6)
         vidasRestantes -= 1
         
         switch vidasRestantes {
         case 2:
             vida1.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe quedan 2 vidas") {
-                self.reproductorMusicaJuego?.play()
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 1:
             vida2.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe queda 1 vida") {
-                self.reproductorMusicaJuego?.play()
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 0:
@@ -473,11 +428,7 @@ class HardModeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if reproductorMusicaJuego == nil {
-            configurarMusicaDeFondo()
-        } else {
-            reproductorMusicaJuego?.play()
-        }
+        AudioManager.shared.reproducirMusicaJuego()
         
         // Conectar acciones de las teclas
         let teclas = [
@@ -498,14 +449,7 @@ class HardModeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        reproductorMusicaJuego?.stop()
-        reproductorMusicaJuego = nil
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        reproductorMusicaJuego?.stop()
-        reproductorMusicaJuego = nil
+        AudioManager.shared.detenerMusica()
     }
 
 }

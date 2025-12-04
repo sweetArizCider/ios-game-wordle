@@ -37,9 +37,6 @@ func cargarRecords() {
 
 class ClassicModeViewController: UIViewController {
     
-    var reproductorSonido: AVAudioPlayer?
-    var reproductorMusicaJuego: AVAudioPlayer?
-    
     //fila 1 izq a derecha
     @IBOutlet weak var campo0: UIButton!
     @IBOutlet weak var campo1: UIButton!
@@ -188,50 +185,9 @@ class ClassicModeViewController: UIViewController {
         }
     }
     
-    func configurarMusicaDeFondo() {
-        // Detener cualquier reproductor existente
-        reproductorMusicaJuego?.stop()
-        reproductorMusicaJuego = nil
-        
-        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego 2", withExtension: "mp3") else { return }
-        
-        do {
-            reproductorMusicaJuego = try AVAudioPlayer(contentsOf: urlMusica)
-            reproductorMusicaJuego?.numberOfLoops = -1
-            reproductorMusicaJuego?.volume = 0.3
-            reproductorMusicaJuego?.play()
-        } catch {
-            print("⚠️ Error al reproducir música de juego: \(error.localizedDescription)")
-        }
-    }
-    
-    func reproducirSonidoBoton() {
-        guard let urlSonido = Bundle.main.url(forResource: "musicaBotones", withExtension: "mp3") else { return }
-        
-        do {
-            reproductorSonido = try AVAudioPlayer(contentsOf: urlSonido)
-            reproductorSonido?.volume = 0.5
-            reproductorSonido?.play()
-        } catch {
-            print("⚠️ Error al reproducir sonido: \(error.localizedDescription)")
-        }
-    }
-    
-    func reproducirSonido(_ nombreArchivo: String) {
-        guard let urlSonido = Bundle.main.url(forResource: nombreArchivo, withExtension: "mp3") else { return }
-        
-        do {
-            reproductorSonido = try AVAudioPlayer(contentsOf: urlSonido)
-            reproductorSonido?.volume = 0.6
-            reproductorSonido?.play()
-        } catch {
-            print("⚠️ Error al reproducir \(nombreArchivo): \(error.localizedDescription)")
-        }
-    }
-    
     // MARK: - Acciones del teclado
     @IBAction func teclaPresionada(_ sender: UIButton) {
-        reproducirSonidoBoton()
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard intentoActual < 4, posicionLetra < 5 else { return }
         
         let letra = sender.currentTitle ?? ""
@@ -241,7 +197,7 @@ class ClassicModeViewController: UIViewController {
     }
     
     @IBAction func borrarLetra(_ sender: UIButton) {
-        reproducirSonidoBoton()
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard posicionLetra > 0 else { return }
         
         posicionLetra -= 1
@@ -250,7 +206,7 @@ class ClassicModeViewController: UIViewController {
     }
     
     @IBAction func subirRespuesta(_ sender: UIButton) {
-        reproducirSonidoBoton()
+        AudioManager.shared.reproducirSonido("musicaBotones")
         // Validar que se hayan ingresado 5 letras
         guard palabraUsuario.count == 5 else {
             mostrarAlerta(titulo: "Incompleto", mensaje: "Debes ingresar 5 letras")
@@ -325,9 +281,9 @@ class ClassicModeViewController: UIViewController {
         let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
         
         if tieneVerde || tieneAmarillo {
-            reproducirSonido("letraCorrecta")
+            AudioManager.shared.reproducirSonido("letraCorrecta 2", volumen: 0.6)
         } else {
-            reproducirSonido("error")
+            AudioManager.shared.reproducirSonido("error 2", volumen: 0.6)
         }
         
         // Verificar si ganó
@@ -377,14 +333,15 @@ class ClassicModeViewController: UIViewController {
     
     // MARK: - Lógica de juego
     func juegoGanado() {
-        reproductorMusicaJuego?.pause()
-        reproducirSonido("musicaGanador")
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaGanador 2", volumen: 0.6)
         calcularPuntaje()
         
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
         let mensaje = "¡Felicidades! Adivinaste en \(intentoActual + 1) intentos.\nTiempo: \(tiempoTranscurrido)s\nPuntaje: \(puntajeActual)"
         
         mostrarAlerta(titulo: "¡Victoria!", mensaje: mensaje) {
+            AudioManager.shared.reproducirMusicaJuego()
             // Guardar el puntaje en variable global antes de reiniciar
             puntajeParaGuardar = self.puntajeActual
             
@@ -397,21 +354,21 @@ class ClassicModeViewController: UIViewController {
     }
     
     func perderVida() {
-        reproductorMusicaJuego?.pause()
-        reproducirSonido("musicaPerdedor")
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaPerdedor 2", volumen: 0.6)
         vidasRestantes -= 1
         
         switch vidasRestantes {
         case 2:
             vida1.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe quedan 2 vidas") {
-                self.reproductorMusicaJuego?.play()
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 1:
             vida2.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe queda 1 vida") {
-                self.reproductorMusicaJuego?.play()
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 0:
@@ -488,11 +445,7 @@ class ClassicModeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if reproductorMusicaJuego == nil {
-            configurarMusicaDeFondo()
-        } else {
-            reproductorMusicaJuego?.play()
-        }
+        AudioManager.shared.reproducirMusicaJuego()
         
         // Conectar acciones de las teclas
         let teclas = [
@@ -513,14 +466,7 @@ class ClassicModeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        reproductorMusicaJuego?.stop()
-        reproductorMusicaJuego = nil
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        reproductorMusicaJuego?.stop()
-        reproductorMusicaJuego = nil
+        AudioManager.shared.detenerMusica()
     }
 
 }
