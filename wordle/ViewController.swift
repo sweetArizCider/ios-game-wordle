@@ -15,11 +15,34 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AudioManager.shared.reproducirMusicaMenu()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AudioManager.shared.detenerMusica()
     }
 
     @IBAction func EmpezarJuego(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
     }
+    
+    @IBAction func verRecords(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
+    }
+    
+    @IBAction func verInstrucciones(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
+    }
+    
+    @IBAction func verCreditos(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
+    }
+    
     
 }
 

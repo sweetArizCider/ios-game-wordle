@@ -116,6 +116,7 @@ class HardModeViewController: UIViewController {
             [campo21, campo22, campo23, campo24, campo25, campo26, campo27]
         ]
         
+        // La música se configurará en viewWillAppear
         configurarJuego()
     }
     
@@ -171,6 +172,7 @@ class HardModeViewController: UIViewController {
     
     // MARK: - Acciones del teclado
     @IBAction func teclaPresionada(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard intentoActual < 4, posicionLetra < 7 else { return }
         
         let letra = sender.currentTitle ?? ""
@@ -180,6 +182,7 @@ class HardModeViewController: UIViewController {
     }
     
     @IBAction func borrarLetra(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard posicionLetra > 0 else { return }
         
         posicionLetra -= 1
@@ -188,6 +191,7 @@ class HardModeViewController: UIViewController {
     }
     
     @IBAction func subirRespuesta(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
         // Validar que se hayan ingresado 7 letras
         guard palabraUsuario.count == 7 else {
             mostrarAlerta(titulo: "Incompleto", mensaje: "Debes ingresar 7 letras")
@@ -256,6 +260,16 @@ class HardModeViewController: UIViewController {
             cambiarColorTecla(letra: String(letra), color: color)
         }
         
+        // Reproducir sonidos según el resultado
+        let tieneVerde = colores.contains(where: { $0 == UIColor(hex: "#C6FFB6") })
+        let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
+        
+        if tieneVerde || tieneAmarillo {
+            AudioManager.shared.reproducirSonido("letraCorrecta", volumen: 0.6)
+        } else {
+            AudioManager.shared.reproducirSonido("error", volumen: 0.6)
+        }
+        
         // Verificar si ganó
         if aciertos == 7 {
             juegoGanado()
@@ -303,6 +317,8 @@ class HardModeViewController: UIViewController {
     
     // MARK: - Lógica de juego
     func juegoGanado() {
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaGanador", volumen: 0.6)
         calcularPuntaje()
         
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
@@ -321,17 +337,21 @@ class HardModeViewController: UIViewController {
     }
     
     func perderVida() {
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaPerdedor", volumen: 0.6)
         vidasRestantes -= 1
         
         switch vidasRestantes {
         case 2:
             vida1.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe quedan 2 vidas") {
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 1:
             vida2.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe queda 1 vida") {
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 0:
@@ -408,6 +428,8 @@ class HardModeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        AudioManager.shared.reproducirMusicaJuego()
+        
         // Conectar acciones de las teclas
         let teclas = [
             teclaQ, teclaW, teclaE, teclaR, teclaT,
@@ -423,6 +445,11 @@ class HardModeViewController: UIViewController {
         
         teclaBack.addTarget(self, action: #selector(borrarLetra(_:)), for: .touchUpInside)
         botonSubir.addTarget(self, action: #selector(subirRespuesta(_:)), for: .touchUpInside)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AudioManager.shared.detenerMusica()
     }
 
 }

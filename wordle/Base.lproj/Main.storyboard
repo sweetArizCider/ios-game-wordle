@@ -59,6 +59,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="verRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Def-Iz-04V"/>
                                             <segue destination="fIc-pd-mRq" kind="presentation" id="fVS-ER-L1Z"/>
                                         </connections>
                                     </button>
@@ -80,6 +81,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="verInstrucciones:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nr-9h-GUg"/>
                                             <segue destination="ByE-Wk-4Wt" kind="presentation" id="67u-IW-gU3"/>
                                         </connections>
                                     </button>
@@ -101,6 +103,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="verCreditos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eo-oj-YAT"/>
                                             <segue destination="ReL-tl-Rux" kind="presentation" id="tLD-fo-v0D"/>
                                         </connections>
                                     </button>

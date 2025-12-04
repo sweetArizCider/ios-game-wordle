@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // Variable global para almacenar los records de los jugadores
 var records: [(nombre: String, puntaje: Int)] = [] {
@@ -130,6 +131,7 @@ class ClassicModeViewController: UIViewController {
             [campo15, campo16, campo17, campo18, campo19]
         ]
         
+        // La música se configurará en viewWillAppear
         configurarJuego()
     }
     
@@ -185,6 +187,7 @@ class ClassicModeViewController: UIViewController {
     
     // MARK: - Acciones del teclado
     @IBAction func teclaPresionada(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard intentoActual < 4, posicionLetra < 5 else { return }
         
         let letra = sender.currentTitle ?? ""
@@ -194,6 +197,7 @@ class ClassicModeViewController: UIViewController {
     }
     
     @IBAction func borrarLetra(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
         guard posicionLetra > 0 else { return }
         
         posicionLetra -= 1
@@ -202,6 +206,7 @@ class ClassicModeViewController: UIViewController {
     }
     
     @IBAction func subirRespuesta(_ sender: UIButton) {
+        AudioManager.shared.reproducirSonido("musicaBotones")
         // Validar que se hayan ingresado 5 letras
         guard palabraUsuario.count == 5 else {
             mostrarAlerta(titulo: "Incompleto", mensaje: "Debes ingresar 5 letras")
@@ -271,6 +276,16 @@ class ClassicModeViewController: UIViewController {
             cambiarColorTecla(letra: String(letra), color: color)
         }
         
+        // Reproducir sonidos según el resultado
+        let tieneVerde = colores.contains(where: { $0 == UIColor(hex: "#C6FFB6") })
+        let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
+        
+        if tieneVerde || tieneAmarillo {
+            AudioManager.shared.reproducirSonido("letraCorrecta", volumen: 0.6)
+        } else {
+            AudioManager.shared.reproducirSonido("error", volumen: 0.6)
+        }
+        
         // Verificar si ganó
         if aciertos == 5 {
             juegoGanado()
@@ -318,12 +333,15 @@ class ClassicModeViewController: UIViewController {
     
     // MARK: - Lógica de juego
     func juegoGanado() {
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaGanador", volumen: 0.6)
         calcularPuntaje()
         
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
         let mensaje = "¡Felicidades! Adivinaste en \(intentoActual + 1) intentos.\nTiempo: \(tiempoTranscurrido)s\nPuntaje: \(puntajeActual)"
         
         mostrarAlerta(titulo: "¡Victoria!", mensaje: mensaje) {
+            AudioManager.shared.reproducirMusicaJuego()
             // Guardar el puntaje en variable global antes de reiniciar
             puntajeParaGuardar = self.puntajeActual
             
@@ -336,17 +354,21 @@ class ClassicModeViewController: UIViewController {
     }
     
     func perderVida() {
+        AudioManager.shared.detenerMusica()
+        AudioManager.shared.reproducirSonido("musicaPerdedor", volumen: 0.6)
         vidasRestantes -= 1
         
         switch vidasRestantes {
         case 2:
             vida1.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe quedan 2 vidas") {
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 1:
             vida2.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe queda 1 vida") {
+                AudioManager.shared.reproducirMusicaJuego()
                 self.reiniciarIntento()
             }
         case 0:
@@ -423,6 +445,8 @@ class ClassicModeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        AudioManager.shared.reproducirMusicaJuego()
+        
         // Conectar acciones de las teclas
         let teclas = [
             teclaQ, teclaW, teclaE, teclaR, teclaT,
@@ -438,6 +462,11 @@ class ClassicModeViewController: UIViewController {
         
         teclaBorrar.addTarget(self, action: #selector(borrarLetra(_:)), for: .touchUpInside)
         botonSubirRespuesta.addTarget(self, action: #selector(subirRespuesta(_:)), for: .touchUpInside)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AudioManager.shared.detenerMusica()
     }
 
 }
