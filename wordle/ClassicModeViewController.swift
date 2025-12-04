@@ -9,6 +9,7 @@ import UIKit
 
 // Variable global para almacenar los records de los jugadores
 var records: [(nombre: String, puntaje: Int)] = []
+var puntajeParaGuardar: Int = 0
 
 class ClassicModeViewController: UIViewController {
     
@@ -92,7 +93,6 @@ class ClassicModeViewController: UIViewController {
     var puntajeActual: Int = 0
     var tiempoInicio: Date?
     var palabraUsuario: String = ""
-    var debeReiniciar: Bool = false
     
     var camposBotones: [[UIButton]] = []
     
@@ -301,7 +301,13 @@ class ClassicModeViewController: UIViewController {
         let mensaje = "¡Felicidades! Adivinaste en \(intentoActual + 1) intentos.\nTiempo: \(tiempoTranscurrido)s\nPuntaje: \(puntajeActual)"
         
         mostrarAlerta(titulo: "¡Victoria!", mensaje: mensaje) {
-            // Ir a la pantalla de nombre (el puntaje ya está guardado en puntajeActual)
+            // Guardar el puntaje en variable global antes de reiniciar
+            puntajeParaGuardar = self.puntajeActual
+            
+            // Reiniciar el juego
+            self.configurarJuego()
+            
+            // Ir a la pantalla de nombre
             self.irAPantallaDeNombre()
         }
     }
@@ -323,6 +329,13 @@ class ClassicModeViewController: UIViewController {
         case 0:
             vida3.isHidden = true
             mostrarAlerta(titulo: "Game Over", mensaje: "Perdiste todas tus vidas.\nPuntaje final: \(puntajeActual)") {
+                // Guardar el puntaje en variable global antes de reiniciar
+                puntajeParaGuardar = self.puntajeActual
+                
+                // Reiniciar el juego
+                self.configurarJuego()
+                
+                // Ir a la pantalla de nombre
                 self.irAPantallaDeNombre()
             }
         default:
@@ -369,7 +382,7 @@ class ClassicModeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NombreFlechaClassic" {
             if let destino = segue.destination as? NombreViewController {
-                destino.puntajeFinal = puntajeActual
+                destino.puntajeFinal = puntajeParaGuardar
             }
         }
     }
@@ -386,12 +399,6 @@ class ClassicModeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Si viene de guardar el nombre, reiniciar el juego
-        if debeReiniciar {
-            configurarJuego()
-            debeReiniciar = false
-        }
         
         // Conectar acciones de las teclas
         let teclas = [
