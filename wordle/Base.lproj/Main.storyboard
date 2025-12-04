@@ -59,6 +59,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="verRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YxC-pv-g8y"/>
                                             <segue destination="fIc-pd-mRq" kind="presentation" id="fVS-ER-L1Z"/>
                                         </connections>
                                     </button>
@@ -80,6 +81,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="verInstrucciones:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4cG-GZ-0DY"/>
                                             <segue destination="ByE-Wk-4Wt" kind="presentation" id="67u-IW-gU3"/>
                                         </connections>
                                     </button>
@@ -101,6 +103,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="verCreditos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rj8-sa-7z6"/>
                                             <segue destination="ReL-tl-Rux" kind="presentation" id="tLD-fo-v0D"/>
                                         </connections>
                                     </button>
@@ -4210,10 +4213,10 @@
             </objects>
             <point key="canvasLocation" x="1519.8473282442746" y="-373.23943661971833"/>
         </scene>
-        <!--View Controller-->
+        <!--Seleccionar Dificultad View Controller-->
         <scene sceneID="wsu-9m-SVB">
             <objects>
-                <viewController id="Qzm-w4-2hh" customClass="ViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qzm-w4-2hh" customClass="SeleccionarDificultadViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E0O-u7-z0G">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4310,6 +4313,8 @@ Selecciona la dificultad</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="botonAprendiz" destination="4rd-kY-XZx" id="QFD-zX-BLx"/>
+                        <outlet property="botonExperto" destination="IJG-7T-8xC" id="XWN-GQ-OBC"/>
                         <outlet property="botonRecords" destination="4rd-kY-XZx" id="omu-MR-29E"/>
                     </connections>
                 </viewController>
