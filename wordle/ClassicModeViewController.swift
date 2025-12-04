@@ -193,7 +193,6 @@ class ClassicModeViewController: UIViewController {
         var aciertos = 0
         var palabraActualArray = Array(palabraActual)
         var palabraUsuarioArray = Array(palabraUsuario)
-        var letrasUsadas = [Bool](repeating: false, count: 5)
         var colores = [UIColor?](repeating: nil, count: 5)
         
         // Primera pasada: verificar letras en posición correcta (verde)
@@ -201,36 +200,52 @@ class ClassicModeViewController: UIViewController {
             if palabraUsuarioArray[i] == palabraActualArray[i] {
                 colores[i] = UIColor(hex: "#C6FFB6")
                 aciertos += 1
-                letrasUsadas[i] = true
             }
         }
         
-        // Segunda pasada: verificar letras en posición incorrecta (amarillo)
+        // Segunda pasada: verificar si la letra existe en la palabra (amarillo o gris)
         for i in 0..<5 {
             if colores[i] == nil {  // Si no está verde
-                var encontrada = false
-                for j in 0..<5 where !letrasUsadas[j] {
-                    if palabraUsuarioArray[i] == palabraActualArray[j] {
-                        colores[i] = UIColor(hex: "#FFEEB6")
-                        letrasUsadas[j] = true
-                        encontrada = true
-                        break
-                    }
-                }
-                
-                // Si no se encontró, pintar de gris
-                if !encontrada {
+                // Verificar si la letra existe en alguna parte de la palabra
+                if palabraActualArray.contains(palabraUsuarioArray[i]) {
+                    colores[i] = UIColor(hex: "#FFEEB6")
+                } else {
                     colores[i] = UIColor(hex: "#C4C4C4")
                 }
             }
         }
         
-        // Aplicar colores a los campos y actualizar teclado
+        // Aplicar colores a los campos
         for i in 0..<5 {
             if let color = colores[i] {
                 camposBotones[intentoActual][i].backgroundColor = color
-                cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: color)
             }
+        }
+        
+        // Actualizar teclado: agrupar colores por letra
+        var coloresPorLetra: [Character: UIColor] = [:]
+        for i in 0..<5 {
+            let letra = palabraUsuarioArray[i]
+            let color = colores[i]!
+            
+            // Prioridad: Verde > Amarillo > Gris
+            if let colorExistente = coloresPorLetra[letra] {
+                if color == UIColor(hex: "#C6FFB6") {
+                    // Verde siempre tiene prioridad
+                    coloresPorLetra[letra] = color
+                } else if color == UIColor(hex: "#FFEEB6") && colorExistente != UIColor(hex: "#C6FFB6") {
+                    // Amarillo tiene prioridad sobre gris
+                    coloresPorLetra[letra] = color
+                }
+                // Si ya es gris, solo mantenerlo si no hay otros colores
+            } else {
+                coloresPorLetra[letra] = color
+            }
+        }
+        
+        // Aplicar colores al teclado
+        for (letra, color) in coloresPorLetra {
+            cambiarColorTecla(letra: String(letra), color: color)
         }
         
         // Verificar si ganó
