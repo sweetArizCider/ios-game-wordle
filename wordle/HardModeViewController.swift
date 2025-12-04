@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 // Variable global para almacenar el puntaje del modo difícil
 var puntajeParaGuardarHard: Int = 0
 
 class HardModeViewController: UIViewController {
+    
+    var reproductorSonido: AVAudioPlayer?
+    var reproductorMusicaJuego: AVAudioPlayer?
     
     @IBOutlet weak var vida1: UIImageView!
     @IBOutlet weak var vida2: UIImageView!
@@ -116,6 +120,7 @@ class HardModeViewController: UIViewController {
             [campo21, campo22, campo23, campo24, campo25, campo26, campo27]
         ]
         
+        configurarMusicaDeFondo()
         configurarJuego()
     }
     
@@ -169,8 +174,46 @@ class HardModeViewController: UIViewController {
         }
     }
     
+    func configurarMusicaDeFondo() {
+        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego 2", withExtension: "mp3") else { return }
+        
+        do {
+            reproductorMusicaJuego = try AVAudioPlayer(contentsOf: urlMusica)
+            reproductorMusicaJuego?.numberOfLoops = -1
+            reproductorMusicaJuego?.volume = 0.3
+            reproductorMusicaJuego?.play()
+        } catch {
+            print("⚠️ Error al reproducir música de juego: \(error.localizedDescription)")
+        }
+    }
+    
+    func reproducirSonidoBoton() {
+        guard let urlSonido = Bundle.main.url(forResource: "musicaBotones 2", withExtension: "mp3") else { return }
+        
+        do {
+            reproductorSonido = try AVAudioPlayer(contentsOf: urlSonido)
+            reproductorSonido?.volume = 0.5
+            reproductorSonido?.play()
+        } catch {
+            print("⚠️ Error al reproducir sonido: \(error.localizedDescription)")
+        }
+    }
+    
+    func reproducirSonido(_ nombreArchivo: String) {
+        guard let urlSonido = Bundle.main.url(forResource: nombreArchivo, withExtension: "mp3") else { return }
+        
+        do {
+            reproductorSonido = try AVAudioPlayer(contentsOf: urlSonido)
+            reproductorSonido?.volume = 0.6
+            reproductorSonido?.play()
+        } catch {
+            print("⚠️ Error al reproducir \(nombreArchivo): \(error.localizedDescription)")
+        }
+    }
+    
     // MARK: - Acciones del teclado
     @IBAction func teclaPresionada(_ sender: UIButton) {
+        reproducirSonidoBoton()
         guard intentoActual < 4, posicionLetra < 7 else { return }
         
         let letra = sender.currentTitle ?? ""
@@ -180,6 +223,7 @@ class HardModeViewController: UIViewController {
     }
     
     @IBAction func borrarLetra(_ sender: UIButton) {
+        reproducirSonidoBoton()
         guard posicionLetra > 0 else { return }
         
         posicionLetra -= 1
@@ -188,6 +232,7 @@ class HardModeViewController: UIViewController {
     }
     
     @IBAction func subirRespuesta(_ sender: UIButton) {
+        reproducirSonidoBoton()
         // Validar que se hayan ingresado 7 letras
         guard palabraUsuario.count == 7 else {
             mostrarAlerta(titulo: "Incompleto", mensaje: "Debes ingresar 7 letras")
@@ -256,6 +301,16 @@ class HardModeViewController: UIViewController {
             cambiarColorTecla(letra: String(letra), color: color)
         }
         
+        // Reproducir sonidos según el resultado
+        let tieneVerde = colores.contains(where: { $0 == UIColor(hex: "#C6FFB6") })
+        let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
+        
+        if tieneVerde || tieneAmarillo {
+            reproducirSonido("letraCorrecta 2")
+        } else {
+            reproducirSonido("error 2")
+        }
+        
         // Verificar si ganó
         if aciertos == 7 {
             juegoGanado()
@@ -303,6 +358,8 @@ class HardModeViewController: UIViewController {
     
     // MARK: - Lógica de juego
     func juegoGanado() {
+        reproductorMusicaJuego?.pause()
+        reproducirSonido("musicaGanador 2")
         calcularPuntaje()
         
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
@@ -321,17 +378,21 @@ class HardModeViewController: UIViewController {
     }
     
     func perderVida() {
+        reproductorMusicaJuego?.pause()
+        reproducirSonido("musicaPerdedor 2")
         vidasRestantes -= 1
         
         switch vidasRestantes {
         case 2:
             vida1.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe quedan 2 vidas") {
+                self.reproductorMusicaJuego?.play()
                 self.reiniciarIntento()
             }
         case 1:
             vida2.isHidden = true
             mostrarAlerta(titulo: "Palabra incorrecta", mensaje: "La palabra era: \(palabraActual)\nTe queda 1 vida") {
+                self.reproductorMusicaJuego?.play()
                 self.reiniciarIntento()
             }
         case 0:
@@ -408,6 +469,8 @@ class HardModeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        reproductorMusicaJuego?.play()
+        
         // Conectar acciones de las teclas
         let teclas = [
             teclaQ, teclaW, teclaE, teclaR, teclaT,
@@ -423,6 +486,11 @@ class HardModeViewController: UIViewController {
         
         teclaBack.addTarget(self, action: #selector(borrarLetra(_:)), for: .touchUpInside)
         botonSubir.addTarget(self, action: #selector(subirRespuesta(_:)), for: .touchUpInside)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        reproductorMusicaJuego?.pause()
     }
 
 }
