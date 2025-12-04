@@ -194,36 +194,42 @@ class ClassicModeViewController: UIViewController {
         var palabraActualArray = Array(palabraActual)
         var palabraUsuarioArray = Array(palabraUsuario)
         var letrasUsadas = [Bool](repeating: false, count: 5)
+        var colores = [UIColor?](repeating: nil, count: 5)
         
         // Primera pasada: verificar letras en posición correcta (verde)
         for i in 0..<5 {
             if palabraUsuarioArray[i] == palabraActualArray[i] {
-                camposBotones[intentoActual][i].backgroundColor = UIColor(hex: "#C6FFB6")
+                colores[i] = UIColor(hex: "#C6FFB6")
                 aciertos += 1
                 letrasUsadas[i] = true
-                cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor(hex: "#C6FFB6"))
             }
         }
         
         // Segunda pasada: verificar letras en posición incorrecta (amarillo)
         for i in 0..<5 {
-            if palabraUsuarioArray[i] != palabraActualArray[i] {
+            if colores[i] == nil {  // Si no está verde
                 var encontrada = false
                 for j in 0..<5 where !letrasUsadas[j] {
                     if palabraUsuarioArray[i] == palabraActualArray[j] {
-                        camposBotones[intentoActual][i].backgroundColor = UIColor(hex: "#FFEEB6")
+                        colores[i] = UIColor(hex: "#FFEEB6")
                         letrasUsadas[j] = true
                         encontrada = true
-                        cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor(hex: "#FFEEB6"))
                         break
                     }
                 }
                 
-                // Si no se encontró, pintar de gris y deshabilitar
+                // Si no se encontró, pintar de gris
                 if !encontrada {
-                    camposBotones[intentoActual][i].backgroundColor = UIColor(hex: "#C4C4C4")
-                    cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: UIColor(hex: "#C4C4C4"))
+                    colores[i] = UIColor(hex: "#C4C4C4")
                 }
+            }
+        }
+        
+        // Aplicar colores a los campos y actualizar teclado
+        for i in 0..<5 {
+            if let color = colores[i] {
+                camposBotones[intentoActual][i].backgroundColor = color
+                cambiarColorTecla(letra: String(palabraUsuarioArray[i]), color: color)
             }
         }
         
