@@ -34,11 +34,8 @@ class NombreViewController: UIViewController {
         // Ordenar los records de mayor a menor puntaje
         records.sort { $0.puntaje > $1.puntaje }
         
-        // Mostrar confirmación y cerrar la vista
-        mostrarAlerta(titulo: "¡Guardado!", mensaje: "Tu puntaje de \(puntajeFinal) ha sido registrado, \(nombre)") {
-            // Cerrar la vista actual y volver
-            self.dismiss(animated: true, completion: nil)
-        }
+        // Cerrar la vista directamente sin alerta
+        self.dismiss(animated: true, completion: nil)
     }
     
     func mostrarAlerta(titulo: String, mensaje: String, completado: (() -> Void)? = nil) {
