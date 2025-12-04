@@ -38,7 +38,7 @@ class AudioManager {
     func reproducirMusicaJuego() {
         detenerMusica()
         
-        guard let url = Bundle.main.url(forResource: "musicaJuego 2", withExtension: "mp3") else {
+        guard let url = Bundle.main.url(forResource: "musicaJuego", withExtension: "mp3") else {
             print("⚠️ No se encontró musicaJuego 2.mp3")
             return
         }

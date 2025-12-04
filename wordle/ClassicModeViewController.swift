@@ -281,9 +281,9 @@ class ClassicModeViewController: UIViewController {
         let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
         
         if tieneVerde || tieneAmarillo {
-            AudioManager.shared.reproducirSonido("letraCorrecta 2", volumen: 0.6)
+            AudioManager.shared.reproducirSonido("letraCorrecta", volumen: 0.6)
         } else {
-            AudioManager.shared.reproducirSonido("error 2", volumen: 0.6)
+            AudioManager.shared.reproducirSonido("error", volumen: 0.6)
         }
         
         // Verificar si ganó
@@ -334,7 +334,7 @@ class ClassicModeViewController: UIViewController {
     // MARK: - Lógica de juego
     func juegoGanado() {
         AudioManager.shared.detenerMusica()
-        AudioManager.shared.reproducirSonido("musicaGanador 2", volumen: 0.6)
+        AudioManager.shared.reproducirSonido("musicaGanador", volumen: 0.6)
         calcularPuntaje()
         
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
@@ -355,7 +355,7 @@ class ClassicModeViewController: UIViewController {
     
     func perderVida() {
         AudioManager.shared.detenerMusica()
-        AudioManager.shared.reproducirSonido("musicaPerdedor 2", volumen: 0.6)
+        AudioManager.shared.reproducirSonido("musicaPerdedor", volumen: 0.6)
         vidasRestantes -= 1
         
         switch vidasRestantes {
