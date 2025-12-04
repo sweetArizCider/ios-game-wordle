@@ -24,12 +24,23 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reproductorMusica?.play()
+        if reproductorMusica == nil {
+            configurarMusicaDeFondo()
+        } else {
+            reproductorMusica?.play()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         reproductorMusica?.stop()
+        reproductorMusica = nil
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        reproductorMusica?.stop()
+        reproductorMusica = nil
     }
     
     func configurarMusicaDeFondo() {

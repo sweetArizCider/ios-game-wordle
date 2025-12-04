@@ -469,7 +469,11 @@ class HardModeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        reproductorMusicaJuego?.play()
+        if reproductorMusicaJuego == nil {
+            configurarMusicaDeFondo()
+        } else {
+            reproductorMusicaJuego?.play()
+        }
         
         // Conectar acciones de las teclas
         let teclas = [
@@ -491,6 +495,13 @@ class HardModeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         reproductorMusicaJuego?.stop()
+        reproductorMusicaJuego = nil
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        reproductorMusicaJuego?.stop()
+        reproductorMusicaJuego = nil
     }
 
 }
