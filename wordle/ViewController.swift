@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     func configurarMusicaDeFondo() {
-        guard let urlMusica = Bundle.main.url(forResource: "musicaMenu 2", withExtension: "mp3") else {
+        guard let urlMusica = Bundle.main.url(forResource: "musicaMenu", withExtension: "mp3") else {
             print("⚠️ No se encontró musicaMenu 2.mp3")
             return
         }
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     }
     
     func reproducirSonidoBoton() {
-        guard let urlSonido = Bundle.main.url(forResource: "musicaBotones 2", withExtension: "mp3") else {
+        guard let urlSonido = Bundle.main.url(forResource: "musicaBotones", withExtension: "mp3") else {
             print("⚠️ No se encontró musicaBotones 2.mp3")
             return
         }

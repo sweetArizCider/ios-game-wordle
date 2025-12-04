@@ -175,7 +175,7 @@ class HardModeViewController: UIViewController {
     }
     
     func configurarMusicaDeFondo() {
-        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego 2", withExtension: "mp3") else { return }
+        guard let urlMusica = Bundle.main.url(forResource: "musicaJuego", withExtension: "mp3") else { return }
         
         do {
             reproductorMusicaJuego = try AVAudioPlayer(contentsOf: urlMusica)
@@ -188,7 +188,7 @@ class HardModeViewController: UIViewController {
     }
     
     func reproducirSonidoBoton() {
-        guard let urlSonido = Bundle.main.url(forResource: "musicaBotones 2", withExtension: "mp3") else { return }
+        guard let urlSonido = Bundle.main.url(forResource: "musicaBotones", withExtension: "mp3") else { return }
         
         do {
             reproductorSonido = try AVAudioPlayer(contentsOf: urlSonido)
@@ -306,9 +306,9 @@ class HardModeViewController: UIViewController {
         let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
         
         if tieneVerde || tieneAmarillo {
-            reproducirSonido("letraCorrecta 2")
+            reproducirSonido("letraCorrecta")
         } else {
-            reproducirSonido("error 2")
+            reproducirSonido("error")
         }
         
         // Verificar si ganó
@@ -359,7 +359,7 @@ class HardModeViewController: UIViewController {
     // MARK: - Lógica de juego
     func juegoGanado() {
         reproductorMusicaJuego?.pause()
-        reproducirSonido("musicaGanador 2")
+        reproducirSonido("musicaGanador")
         calcularPuntaje()
         
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
@@ -379,7 +379,7 @@ class HardModeViewController: UIViewController {
     
     func perderVida() {
         reproductorMusicaJuego?.pause()
-        reproducirSonido("musicaPerdedor 2")
+        reproducirSonido("musicaPerdedor")
         vidasRestantes -= 1
         
         switch vidasRestantes {

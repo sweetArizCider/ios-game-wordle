@@ -11,6 +11,14 @@
 		0418CA8B2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA892EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png */; };
 		0418CA8C2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA882EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png */; };
 		0418CA8D2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA8A2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png */; };
+		049C659B2EE129C50018078B /* musicaMenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65992EE129C50018078B /* musicaMenu.mp3 */; };
+		049C659C2EE129C50018078B /* letraCorrecta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65942EE129C50018078B /* letraCorrecta.mp3 */; };
+		049C659D2EE129C50018078B /* musicaGanador.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65972EE129C50018078B /* musicaGanador.mp3 */; };
+		049C659E2EE129C50018078B /* musicaCreditos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65962EE129C50018078B /* musicaCreditos.mp3 */; };
+		049C659F2EE129C50018078B /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65932EE129C50018078B /* error.mp3 */; };
+		049C65A02EE129C50018078B /* musicaPerdedor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C659A2EE129C50018078B /* musicaPerdedor.mp3 */; };
+		049C65A12EE129C50018078B /* musicaJuego.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65982EE129C50018078B /* musicaJuego.mp3 */; };
+		049C65A22EE129C50018078B /* musicaBotones.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65952EE129C50018078B /* musicaBotones.mp3 */; };
 		04E395C02EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E395BF2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png */; };
 		04E395C12EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E395BE2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png */; };
 /* End PBXBuildFile section */
@@ -21,6 +29,14 @@
 		0418CA882EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191635-removebg-preview.png"; sourceTree = "<group>"; };
 		0418CA892EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191754-removebg-preview.png"; sourceTree = "<group>"; };
 		0418CA8A2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191845-removebg-preview.png"; sourceTree = "<group>"; };
+		049C65932EE129C50018078B /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
+		049C65942EE129C50018078B /* letraCorrecta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letraCorrecta.mp3; sourceTree = "<group>"; };
+		049C65952EE129C50018078B /* musicaBotones.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaBotones.mp3; sourceTree = "<group>"; };
+		049C65962EE129C50018078B /* musicaCreditos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaCreditos.mp3; sourceTree = "<group>"; };
+		049C65972EE129C50018078B /* musicaGanador.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaGanador.mp3; sourceTree = "<group>"; };
+		049C65982EE129C50018078B /* musicaJuego.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaJuego.mp3; sourceTree = "<group>"; };
+		049C65992EE129C50018078B /* musicaMenu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaMenu.mp3; sourceTree = "<group>"; };
+		049C659A2EE129C50018078B /* musicaPerdedor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaPerdedor.mp3; sourceTree = "<group>"; };
 		04E395BE2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-02_131514-removebg-preview.png"; sourceTree = "<group>"; };
 		04E395BF2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-02_133335-removebg-preview.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +83,14 @@
 				0418CA8A2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png */,
 				04E395BE2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png */,
 				04E395BF2EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png */,
+				049C65932EE129C50018078B /* error.mp3 */,
+				049C65942EE129C50018078B /* letraCorrecta.mp3 */,
+				049C65952EE129C50018078B /* musicaBotones.mp3 */,
+				049C65962EE129C50018078B /* musicaCreditos.mp3 */,
+				049C65972EE129C50018078B /* musicaGanador.mp3 */,
+				049C65982EE129C50018078B /* musicaJuego.mp3 */,
+				049C65992EE129C50018078B /* musicaMenu.mp3 */,
+				049C659A2EE129C50018078B /* musicaPerdedor.mp3 */,
 				0418CA632EDE78F900AB097C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +171,14 @@
 				0418CA8B2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png in Resources */,
 				04E395C02EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png in Resources */,
 				04E395C12EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png in Resources */,
+				049C659B2EE129C50018078B /* musicaMenu.mp3 in Resources */,
+				049C659C2EE129C50018078B /* letraCorrecta.mp3 in Resources */,
+				049C659D2EE129C50018078B /* musicaGanador.mp3 in Resources */,
+				049C659E2EE129C50018078B /* musicaCreditos.mp3 in Resources */,
+				049C659F2EE129C50018078B /* error.mp3 in Resources */,
+				049C65A02EE129C50018078B /* musicaPerdedor.mp3 in Resources */,
+				049C65A12EE129C50018078B /* musicaJuego.mp3 in Resources */,
+				049C65A22EE129C50018078B /* musicaBotones.mp3 in Resources */,
 				0418CA8C2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png in Resources */,
 				0418CA8D2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png in Resources */,
 			);
