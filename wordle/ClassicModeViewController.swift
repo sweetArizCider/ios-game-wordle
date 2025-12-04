@@ -8,8 +8,31 @@
 import UIKit
 
 // Variable global para almacenar los records de los jugadores
-var records: [(nombre: String, puntaje: Int)] = []
+var records: [(nombre: String, puntaje: Int)] = [] {
+    didSet {
+        // Guardar en UserDefaults cada vez que cambie
+        guardarRecords()
+    }
+}
 var puntajeParaGuardar: Int = 0
+
+// MARK: - Funciones para persistencia de datos
+func guardarRecords() {
+    let recordsData = records.map { ["nombre": $0.nombre, "puntaje": $0.puntaje] }
+    UserDefaults.standard.set(recordsData, forKey: "wordleRecords")
+}
+
+func cargarRecords() {
+    if let recordsData = UserDefaults.standard.array(forKey: "wordleRecords") as? [[String: Any]] {
+        records = recordsData.compactMap { dict in
+            guard let nombre = dict["nombre"] as? String,
+                  let puntaje = dict["puntaje"] as? Int else {
+                return nil
+            }
+            return (nombre: nombre, puntaje: puntaje)
+        }
+    }
+}
 
 class ClassicModeViewController: UIViewController {
     

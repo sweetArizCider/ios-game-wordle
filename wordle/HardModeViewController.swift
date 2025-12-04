@@ -87,11 +87,11 @@ class HardModeViewController: UIViewController {
     // Variables del juego
     var bancoPalabras: [String] = [
         "EJEMPLO", "PALABRA", "ALEGRIA", "FAMILIA", "TRABAJO",
-        "ESCUELA", "VENTANA", "HISTORIA", "PERSONA", "GUITARRA",
-        "MENSAJE", "CASTILLO", "PROYECTO", "HERMANO", "CAMINAR",
-        "MAÑANA", "PROBLEMA", "CANCION", "ESCRITOR", "TELEFONO",
-        "CIENCIA", "DEPORTE", "ESTUDIO", "MONTAÑA", "NAVIDAD",
-        "COMIDA", "JARDIN", "PINTURA", "EDIFICIO", "PLANETA"
+        "ESCUELA", "VENTANA", "HISTORIA", "PERSONA", "COMIDAS",
+        "MENSAJE", "PROYECTO", "HERMANO", "CAMINAR", "MAÑANAS",
+        "PROBLEMA", "CANCION", "ANIMALES", "TELEFONO", "CIENCIA",
+        "DEPORTE", "ESTUDIO", "MONTAÑA", "NAVIDAD", "JARDIN",
+        "PINTURA", "EDIFICIO", "PLANETA", "CONSOLA", "AMISTAD"
     ]
     
     var palabraActual: String = ""

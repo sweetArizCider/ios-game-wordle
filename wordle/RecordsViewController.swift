@@ -18,6 +18,9 @@ class RecordsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Cargar records guardados
+        cargarRecords()
+        
         // Configurar la apariencia de los botones
         configurarBotones()
         
@@ -27,6 +30,9 @@ class RecordsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Cargar records actualizados
+        cargarRecords()
         
         // Actualizar los records cada vez que aparece la vista
         actualizarRecords()
