@@ -11,6 +11,55 @@
 		0418CA8B2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA892EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png */; };
 		0418CA8C2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA882EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png */; };
 		0418CA8D2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418CA8A2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png */; };
+		0477406B2EE35DD200F92797 /* Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 0477406A2EE35DD200F92797 /* Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png */; };
+		0486E6A52EE364E1009452EB /* Captura de pantalla 2025-12-05 a la(s) 12.23.12 p.m..png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E6A42EE364E1009452EB /* Captura de pantalla 2025-12-05 a la(s) 12.23.12 p.m..png */; };
+		0486E7842EE36968009452EB /* icon-ios-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E75E2EE36968009452EB /* icon-ios-60x60@3x.png */; };
+		0486E7852EE36968009452EB /* icon-watchos-108x108@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E77F2EE36968009452EB /* icon-watchos-108x108@2x.png */; };
+		0486E7862EE36968009452EB /* icon-ios-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E75D2EE36968009452EB /* icon-ios-60x60@2x.png */; };
+		0486E7872EE36968009452EB /* icon-watchos-1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7822EE36968009452EB /* icon-watchos-1024x1024.png */; };
+		0486E7882EE36968009452EB /* icon-watchos-54x54@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E77C2EE36968009452EB /* icon-watchos-54x54@2x.png */; };
+		0486E7892EE36968009452EB /* icon-mac-16x16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7662EE36968009452EB /* icon-mac-16x16@2x.png */; };
+		0486E78A2EE36968009452EB /* icon-ios-38x38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7592EE36968009452EB /* icon-ios-38x38@2x.png */; };
+		0486E78B2EE36968009452EB /* icon-mac-32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7672EE36968009452EB /* icon-mac-32x32.png */; };
+		0486E78C2EE36968009452EB /* icon-watchos-46x46@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7792EE36968009452EB /* icon-watchos-46x46@2x.png */; };
+		0486E78D2EE36968009452EB /* icon-watchos-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7762EE36968009452EB /* icon-watchos-40x40@2x.png */; };
+		0486E78E2EE36968009452EB /* icon-mac-256x256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E76C2EE36968009452EB /* icon-mac-256x256@2x.png */; };
+		0486E78F2EE36968009452EB /* icon-watchos-32x32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7742EE36968009452EB /* icon-watchos-32x32@2x.png */; };
+		0486E7902EE36968009452EB /* icon-watchos-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E77A2EE36968009452EB /* icon-watchos-50x50@2x.png */; };
+		0486E7912EE36968009452EB /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7542EE36968009452EB /* Contents.json */; };
+		0486E7922EE36968009452EB /* icon-watchos-30x30@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7732EE36968009452EB /* icon-watchos-30x30@2x.png */; };
+		0486E7932EE36968009452EB /* icon-ios-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E75B2EE36968009452EB /* icon-ios-40x40@2x.png */; };
+		0486E7942EE36968009452EB /* icon-ios-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7632EE36968009452EB /* icon-ios-83.5x83.5@2x.png */; };
+		0486E7952EE36968009452EB /* icon-watchos-33x33@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7752EE36968009452EB /* icon-watchos-33x33@2x.png */; };
+		0486E7962EE36968009452EB /* icon-mac-128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E76A2EE36968009452EB /* icon-mac-128x128@2x.png */; };
+		0486E7972EE36968009452EB /* icon-ios-1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7642EE36968009452EB /* icon-ios-1024x1024.png */; };
+		0486E7982EE36968009452EB /* icon-ios-64x64@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7602EE36968009452EB /* icon-ios-64x64@3x.png */; };
+		0486E7992EE36968009452EB /* icon-mac-512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E76D2EE36968009452EB /* icon-mac-512x512.png */; };
+		0486E79A2EE36968009452EB /* icon-watchos-22x22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E76F2EE36968009452EB /* icon-watchos-22x22@2x.png */; };
+		0486E79B2EE36968009452EB /* icon-ios-38x38@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E75A2EE36968009452EB /* icon-ios-38x38@3x.png */; };
+		0486E79C2EE36968009452EB /* icon-ios-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7552EE36968009452EB /* icon-ios-20x20@2x.png */; };
+		0486E79D2EE36968009452EB /* icon-watchos-44x44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7782EE36968009452EB /* icon-watchos-44x44@2x.png */; };
+		0486E79E2EE36968009452EB /* icon-mac-16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7652EE36968009452EB /* icon-mac-16x16.png */; };
+		0486E79F2EE36968009452EB /* icon-watchos-129x129@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7812EE36968009452EB /* icon-watchos-129x129@2x.png */; };
+		0486E7A02EE36968009452EB /* icon-watchos-27.5x27.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7712EE36968009452EB /* icon-watchos-27.5x27.5@2x.png */; };
+		0486E7A12EE36968009452EB /* icon-ios-64x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E75F2EE36968009452EB /* icon-ios-64x64@2x.png */; };
+		0486E7A22EE36968009452EB /* icon-ios-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7572EE36968009452EB /* icon-ios-29x29@2x.png */; };
+		0486E7A32EE36968009452EB /* icon-mac-512x512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E76E2EE36968009452EB /* icon-mac-512x512@2x.png */; };
+		0486E7A42EE36968009452EB /* icon-mac-256x256.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E76B2EE36968009452EB /* icon-mac-256x256.png */; };
+		0486E7A52EE36968009452EB /* icon-watchos-98x98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E77E2EE36968009452EB /* icon-watchos-98x98@2x.png */; };
+		0486E7A62EE36968009452EB /* icon-ios-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E75C2EE36968009452EB /* icon-ios-40x40@3x.png */; };
+		0486E7A72EE36968009452EB /* icon-mac-32x32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7682EE36968009452EB /* icon-mac-32x32@2x.png */; };
+		0486E7A82EE36968009452EB /* icon-ios-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7622EE36968009452EB /* icon-ios-76x76@2x.png */; };
+		0486E7A92EE36968009452EB /* icon-watchos-24x24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7702EE36968009452EB /* icon-watchos-24x24@2x.png */; };
+		0486E7AA2EE36968009452EB /* icon-ios-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7562EE36968009452EB /* icon-ios-20x20@3x.png */; };
+		0486E7AB2EE36968009452EB /* icon-watchos-43.5x43.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7772EE36968009452EB /* icon-watchos-43.5x43.5@2x.png */; };
+		0486E7AC2EE36968009452EB /* icon-watchos-51x51@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E77B2EE36968009452EB /* icon-watchos-51x51@2x.png */; };
+		0486E7AD2EE36968009452EB /* icon-ios-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7582EE36968009452EB /* icon-ios-29x29@3x.png */; };
+		0486E7AE2EE36968009452EB /* icon-watchos-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7722EE36968009452EB /* icon-watchos-29x29@2x.png */; };
+		0486E7AF2EE36968009452EB /* icon-watchos-86x86@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E77D2EE36968009452EB /* icon-watchos-86x86@2x.png */; };
+		0486E7B02EE36968009452EB /* icon-watchos-117x117@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7802EE36968009452EB /* icon-watchos-117x117@2x.png */; };
+		0486E7B12EE36968009452EB /* icon-mac-128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7692EE36968009452EB /* icon-mac-128x128.png */; };
+		0486E7B22EE36968009452EB /* icon-ios-68x68@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0486E7612EE36968009452EB /* icon-ios-68x68@2x.png */; };
 		049C659B2EE129C50018078B /* musicaMenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65992EE129C50018078B /* musicaMenu.mp3 */; };
 		049C659C2EE129C50018078B /* letraCorrecta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65942EE129C50018078B /* letraCorrecta.mp3 */; };
 		049C659D2EE129C50018078B /* musicaGanador.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 049C65972EE129C50018078B /* musicaGanador.mp3 */; };
@@ -29,6 +78,55 @@
 		0418CA882EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191635-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191635-removebg-preview.png"; sourceTree = "<group>"; };
 		0418CA892EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191754-removebg-preview.png"; sourceTree = "<group>"; };
 		0418CA8A2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191845-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-01_191845-removebg-preview.png"; sourceTree = "<group>"; };
+		0477406A2EE35DD200F92797 /* Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png"; sourceTree = "<group>"; };
+		0486E6A42EE364E1009452EB /* Captura de pantalla 2025-12-05 a la(s) 12.23.12 p.m..png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura de pantalla 2025-12-05 a la(s) 12.23.12 p.m..png"; sourceTree = "<group>"; };
+		0486E7542EE36968009452EB /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		0486E7552EE36968009452EB /* icon-ios-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-20x20@2x.png"; sourceTree = "<group>"; };
+		0486E7562EE36968009452EB /* icon-ios-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-20x20@3x.png"; sourceTree = "<group>"; };
+		0486E7572EE36968009452EB /* icon-ios-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-29x29@2x.png"; sourceTree = "<group>"; };
+		0486E7582EE36968009452EB /* icon-ios-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-29x29@3x.png"; sourceTree = "<group>"; };
+		0486E7592EE36968009452EB /* icon-ios-38x38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-38x38@2x.png"; sourceTree = "<group>"; };
+		0486E75A2EE36968009452EB /* icon-ios-38x38@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-38x38@3x.png"; sourceTree = "<group>"; };
+		0486E75B2EE36968009452EB /* icon-ios-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-40x40@2x.png"; sourceTree = "<group>"; };
+		0486E75C2EE36968009452EB /* icon-ios-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-40x40@3x.png"; sourceTree = "<group>"; };
+		0486E75D2EE36968009452EB /* icon-ios-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-60x60@2x.png"; sourceTree = "<group>"; };
+		0486E75E2EE36968009452EB /* icon-ios-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-60x60@3x.png"; sourceTree = "<group>"; };
+		0486E75F2EE36968009452EB /* icon-ios-64x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-64x64@2x.png"; sourceTree = "<group>"; };
+		0486E7602EE36968009452EB /* icon-ios-64x64@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-64x64@3x.png"; sourceTree = "<group>"; };
+		0486E7612EE36968009452EB /* icon-ios-68x68@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-68x68@2x.png"; sourceTree = "<group>"; };
+		0486E7622EE36968009452EB /* icon-ios-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-76x76@2x.png"; sourceTree = "<group>"; };
+		0486E7632EE36968009452EB /* icon-ios-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		0486E7642EE36968009452EB /* icon-ios-1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios-1024x1024.png"; sourceTree = "<group>"; };
+		0486E7652EE36968009452EB /* icon-mac-16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-16x16.png"; sourceTree = "<group>"; };
+		0486E7662EE36968009452EB /* icon-mac-16x16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-16x16@2x.png"; sourceTree = "<group>"; };
+		0486E7672EE36968009452EB /* icon-mac-32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-32x32.png"; sourceTree = "<group>"; };
+		0486E7682EE36968009452EB /* icon-mac-32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-32x32@2x.png"; sourceTree = "<group>"; };
+		0486E7692EE36968009452EB /* icon-mac-128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-128x128.png"; sourceTree = "<group>"; };
+		0486E76A2EE36968009452EB /* icon-mac-128x128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-128x128@2x.png"; sourceTree = "<group>"; };
+		0486E76B2EE36968009452EB /* icon-mac-256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-256x256.png"; sourceTree = "<group>"; };
+		0486E76C2EE36968009452EB /* icon-mac-256x256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-256x256@2x.png"; sourceTree = "<group>"; };
+		0486E76D2EE36968009452EB /* icon-mac-512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-512x512.png"; sourceTree = "<group>"; };
+		0486E76E2EE36968009452EB /* icon-mac-512x512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mac-512x512@2x.png"; sourceTree = "<group>"; };
+		0486E76F2EE36968009452EB /* icon-watchos-22x22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-22x22@2x.png"; sourceTree = "<group>"; };
+		0486E7702EE36968009452EB /* icon-watchos-24x24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-24x24@2x.png"; sourceTree = "<group>"; };
+		0486E7712EE36968009452EB /* icon-watchos-27.5x27.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-27.5x27.5@2x.png"; sourceTree = "<group>"; };
+		0486E7722EE36968009452EB /* icon-watchos-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-29x29@2x.png"; sourceTree = "<group>"; };
+		0486E7732EE36968009452EB /* icon-watchos-30x30@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-30x30@2x.png"; sourceTree = "<group>"; };
+		0486E7742EE36968009452EB /* icon-watchos-32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-32x32@2x.png"; sourceTree = "<group>"; };
+		0486E7752EE36968009452EB /* icon-watchos-33x33@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-33x33@2x.png"; sourceTree = "<group>"; };
+		0486E7762EE36968009452EB /* icon-watchos-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-40x40@2x.png"; sourceTree = "<group>"; };
+		0486E7772EE36968009452EB /* icon-watchos-43.5x43.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-43.5x43.5@2x.png"; sourceTree = "<group>"; };
+		0486E7782EE36968009452EB /* icon-watchos-44x44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-44x44@2x.png"; sourceTree = "<group>"; };
+		0486E7792EE36968009452EB /* icon-watchos-46x46@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-46x46@2x.png"; sourceTree = "<group>"; };
+		0486E77A2EE36968009452EB /* icon-watchos-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-50x50@2x.png"; sourceTree = "<group>"; };
+		0486E77B2EE36968009452EB /* icon-watchos-51x51@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-51x51@2x.png"; sourceTree = "<group>"; };
+		0486E77C2EE36968009452EB /* icon-watchos-54x54@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-54x54@2x.png"; sourceTree = "<group>"; };
+		0486E77D2EE36968009452EB /* icon-watchos-86x86@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-86x86@2x.png"; sourceTree = "<group>"; };
+		0486E77E2EE36968009452EB /* icon-watchos-98x98@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-98x98@2x.png"; sourceTree = "<group>"; };
+		0486E77F2EE36968009452EB /* icon-watchos-108x108@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-108x108@2x.png"; sourceTree = "<group>"; };
+		0486E7802EE36968009452EB /* icon-watchos-117x117@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-117x117@2x.png"; sourceTree = "<group>"; };
+		0486E7812EE36968009452EB /* icon-watchos-129x129@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-129x129@2x.png"; sourceTree = "<group>"; };
+		0486E7822EE36968009452EB /* icon-watchos-1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-watchos-1024x1024.png"; sourceTree = "<group>"; };
 		049C65932EE129C50018078B /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 		049C65942EE129C50018078B /* letraCorrecta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letraCorrecta.mp3; sourceTree = "<group>"; };
 		049C65952EE129C50018078B /* musicaBotones.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaBotones.mp3; sourceTree = "<group>"; };
@@ -91,6 +189,9 @@
 				049C65982EE129C50018078B /* musicaJuego.mp3 */,
 				049C65992EE129C50018078B /* musicaMenu.mp3 */,
 				049C659A2EE129C50018078B /* musicaPerdedor.mp3 */,
+				0477406A2EE35DD200F92797 /* Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png */,
+				0486E6A42EE364E1009452EB /* Captura de pantalla 2025-12-05 a la(s) 12.23.12 p.m..png */,
+				0486E7832EE36968009452EB /* AppIcon.appiconset */,
 				0418CA632EDE78F900AB097C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +202,60 @@
 				0418CA622EDE78F900AB097C /* wordle.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0486E7832EE36968009452EB /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				0486E7542EE36968009452EB /* Contents.json */,
+				0486E7552EE36968009452EB /* icon-ios-20x20@2x.png */,
+				0486E7562EE36968009452EB /* icon-ios-20x20@3x.png */,
+				0486E7572EE36968009452EB /* icon-ios-29x29@2x.png */,
+				0486E7582EE36968009452EB /* icon-ios-29x29@3x.png */,
+				0486E7592EE36968009452EB /* icon-ios-38x38@2x.png */,
+				0486E75A2EE36968009452EB /* icon-ios-38x38@3x.png */,
+				0486E75B2EE36968009452EB /* icon-ios-40x40@2x.png */,
+				0486E75C2EE36968009452EB /* icon-ios-40x40@3x.png */,
+				0486E75D2EE36968009452EB /* icon-ios-60x60@2x.png */,
+				0486E75E2EE36968009452EB /* icon-ios-60x60@3x.png */,
+				0486E75F2EE36968009452EB /* icon-ios-64x64@2x.png */,
+				0486E7602EE36968009452EB /* icon-ios-64x64@3x.png */,
+				0486E7612EE36968009452EB /* icon-ios-68x68@2x.png */,
+				0486E7622EE36968009452EB /* icon-ios-76x76@2x.png */,
+				0486E7632EE36968009452EB /* icon-ios-83.5x83.5@2x.png */,
+				0486E7642EE36968009452EB /* icon-ios-1024x1024.png */,
+				0486E7652EE36968009452EB /* icon-mac-16x16.png */,
+				0486E7662EE36968009452EB /* icon-mac-16x16@2x.png */,
+				0486E7672EE36968009452EB /* icon-mac-32x32.png */,
+				0486E7682EE36968009452EB /* icon-mac-32x32@2x.png */,
+				0486E7692EE36968009452EB /* icon-mac-128x128.png */,
+				0486E76A2EE36968009452EB /* icon-mac-128x128@2x.png */,
+				0486E76B2EE36968009452EB /* icon-mac-256x256.png */,
+				0486E76C2EE36968009452EB /* icon-mac-256x256@2x.png */,
+				0486E76D2EE36968009452EB /* icon-mac-512x512.png */,
+				0486E76E2EE36968009452EB /* icon-mac-512x512@2x.png */,
+				0486E76F2EE36968009452EB /* icon-watchos-22x22@2x.png */,
+				0486E7702EE36968009452EB /* icon-watchos-24x24@2x.png */,
+				0486E7712EE36968009452EB /* icon-watchos-27.5x27.5@2x.png */,
+				0486E7722EE36968009452EB /* icon-watchos-29x29@2x.png */,
+				0486E7732EE36968009452EB /* icon-watchos-30x30@2x.png */,
+				0486E7742EE36968009452EB /* icon-watchos-32x32@2x.png */,
+				0486E7752EE36968009452EB /* icon-watchos-33x33@2x.png */,
+				0486E7762EE36968009452EB /* icon-watchos-40x40@2x.png */,
+				0486E7772EE36968009452EB /* icon-watchos-43.5x43.5@2x.png */,
+				0486E7782EE36968009452EB /* icon-watchos-44x44@2x.png */,
+				0486E7792EE36968009452EB /* icon-watchos-46x46@2x.png */,
+				0486E77A2EE36968009452EB /* icon-watchos-50x50@2x.png */,
+				0486E77B2EE36968009452EB /* icon-watchos-51x51@2x.png */,
+				0486E77C2EE36968009452EB /* icon-watchos-54x54@2x.png */,
+				0486E77D2EE36968009452EB /* icon-watchos-86x86@2x.png */,
+				0486E77E2EE36968009452EB /* icon-watchos-98x98@2x.png */,
+				0486E77F2EE36968009452EB /* icon-watchos-108x108@2x.png */,
+				0486E7802EE36968009452EB /* icon-watchos-117x117@2x.png */,
+				0486E7812EE36968009452EB /* icon-watchos-129x129@2x.png */,
+				0486E7822EE36968009452EB /* icon-watchos-1024x1024.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +324,58 @@
 			files = (
 				0418CA822EDE7B4A00AB097C /* Captura de pantalla 2025-12-01 192004.png in Resources */,
 				0418CA8B2EDE7C0F00AB097C /* Captura_de_pantalla_2025-12-01_191754-removebg-preview.png in Resources */,
+				0486E7842EE36968009452EB /* icon-ios-60x60@3x.png in Resources */,
+				0486E7852EE36968009452EB /* icon-watchos-108x108@2x.png in Resources */,
+				0486E7862EE36968009452EB /* icon-ios-60x60@2x.png in Resources */,
+				0486E7872EE36968009452EB /* icon-watchos-1024x1024.png in Resources */,
+				0486E7882EE36968009452EB /* icon-watchos-54x54@2x.png in Resources */,
+				0486E7892EE36968009452EB /* icon-mac-16x16@2x.png in Resources */,
+				0486E78A2EE36968009452EB /* icon-ios-38x38@2x.png in Resources */,
+				0486E78B2EE36968009452EB /* icon-mac-32x32.png in Resources */,
+				0486E78C2EE36968009452EB /* icon-watchos-46x46@2x.png in Resources */,
+				0486E78D2EE36968009452EB /* icon-watchos-40x40@2x.png in Resources */,
+				0486E78E2EE36968009452EB /* icon-mac-256x256@2x.png in Resources */,
+				0486E78F2EE36968009452EB /* icon-watchos-32x32@2x.png in Resources */,
+				0486E7902EE36968009452EB /* icon-watchos-50x50@2x.png in Resources */,
+				0486E7912EE36968009452EB /* Contents.json in Resources */,
+				0486E7922EE36968009452EB /* icon-watchos-30x30@2x.png in Resources */,
+				0486E7932EE36968009452EB /* icon-ios-40x40@2x.png in Resources */,
+				0486E7942EE36968009452EB /* icon-ios-83.5x83.5@2x.png in Resources */,
+				0486E7952EE36968009452EB /* icon-watchos-33x33@2x.png in Resources */,
+				0486E7962EE36968009452EB /* icon-mac-128x128@2x.png in Resources */,
+				0486E7972EE36968009452EB /* icon-ios-1024x1024.png in Resources */,
+				0486E7982EE36968009452EB /* icon-ios-64x64@3x.png in Resources */,
+				0486E7992EE36968009452EB /* icon-mac-512x512.png in Resources */,
+				0486E79A2EE36968009452EB /* icon-watchos-22x22@2x.png in Resources */,
+				0486E79B2EE36968009452EB /* icon-ios-38x38@3x.png in Resources */,
+				0486E79C2EE36968009452EB /* icon-ios-20x20@2x.png in Resources */,
+				0486E79D2EE36968009452EB /* icon-watchos-44x44@2x.png in Resources */,
+				0486E79E2EE36968009452EB /* icon-mac-16x16.png in Resources */,
+				0486E79F2EE36968009452EB /* icon-watchos-129x129@2x.png in Resources */,
+				0486E7A02EE36968009452EB /* icon-watchos-27.5x27.5@2x.png in Resources */,
+				0486E7A12EE36968009452EB /* icon-ios-64x64@2x.png in Resources */,
+				0486E7A22EE36968009452EB /* icon-ios-29x29@2x.png in Resources */,
+				0486E7A32EE36968009452EB /* icon-mac-512x512@2x.png in Resources */,
+				0486E7A42EE36968009452EB /* icon-mac-256x256.png in Resources */,
+				0486E7A52EE36968009452EB /* icon-watchos-98x98@2x.png in Resources */,
+				0486E7A62EE36968009452EB /* icon-ios-40x40@3x.png in Resources */,
+				0486E7A72EE36968009452EB /* icon-mac-32x32@2x.png in Resources */,
+				0486E7A82EE36968009452EB /* icon-ios-76x76@2x.png in Resources */,
+				0486E7A92EE36968009452EB /* icon-watchos-24x24@2x.png in Resources */,
+				0486E7AA2EE36968009452EB /* icon-ios-20x20@3x.png in Resources */,
+				0486E7AB2EE36968009452EB /* icon-watchos-43.5x43.5@2x.png in Resources */,
+				0486E7AC2EE36968009452EB /* icon-watchos-51x51@2x.png in Resources */,
+				0486E7AD2EE36968009452EB /* icon-ios-29x29@3x.png in Resources */,
+				0486E7AE2EE36968009452EB /* icon-watchos-29x29@2x.png in Resources */,
+				0486E7AF2EE36968009452EB /* icon-watchos-86x86@2x.png in Resources */,
+				0486E7B02EE36968009452EB /* icon-watchos-117x117@2x.png in Resources */,
+				0486E7B12EE36968009452EB /* icon-mac-128x128.png in Resources */,
+				0486E7B22EE36968009452EB /* icon-ios-68x68@2x.png in Resources */,
 				04E395C02EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_133335-removebg-preview.png in Resources */,
 				04E395C12EDF9D300057E7A6 /* Captura_de_pantalla_2025-12-02_131514-removebg-preview.png in Resources */,
+				0477406B2EE35DD200F92797 /* Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png in Resources */,
 				049C659B2EE129C50018078B /* musicaMenu.mp3 in Resources */,
+				0486E6A52EE364E1009452EB /* Captura de pantalla 2025-12-05 a la(s) 12.23.12 p.m..png in Resources */,
 				049C659C2EE129C50018078B /* letraCorrecta.mp3 in Resources */,
 				049C659D2EE129C50018078B /* musicaGanador.mp3 in Resources */,
 				049C659E2EE129C50018078B /* musicaCreditos.mp3 in Resources */,

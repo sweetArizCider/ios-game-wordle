@@ -16,8 +16,6 @@ class NombreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Configurar el campo de texto
         campoNombre.placeholder = "Ingresa tu nombre"
         campoNombre.becomeFirstResponder()
     }
@@ -27,16 +25,12 @@ class NombreViewController: UIViewController {
             mostrarAlerta(titulo: "Error", mensaje: "Por favor ingresa tu nombre")
             return
         }
-        
-        // Agregar el record al array global
+
         records.append((nombre: nombre, puntaje: puntajeFinal))
-        
-        // Ordenar los records de mayor a menor puntaje
+
         records.sort { $0.puntaje > $1.puntaje }
-        
-        // Mostrar confirmación antes de cerrar
+
         mostrarAlerta(titulo: "¡Guardado!", mensaje: "Tu puntaje de \(puntajeFinal) ha sido registrado exitosamente, \(nombre)") {
-            // Cerrar la vista
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -52,19 +46,7 @@ class NombreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Conectar el botón aceptar
         botonAceptar.addTarget(self, action: #selector(aceptarNombre(_:)), for: .touchUpInside)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

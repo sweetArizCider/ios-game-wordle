@@ -84,8 +84,7 @@ class HardModeViewController: UIViewController {
     @IBOutlet weak var teclaM: UIButton!
     @IBOutlet weak var teclaBack: UIButton!
     @IBOutlet weak var botonSubir: UIButton!
-    
-    // Variables del juego
+
     var bancoPalabras: [String] = [
         "EJEMPLO", "PALABRA", "ALEGRIA", "FAMILIA", "TRABAJO",
         "ESCUELA", "VENTANA", "HISTORIA", "PERSONA", "COMIDAS",
@@ -107,8 +106,7 @@ class HardModeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Inicializar el arreglo de botones por fila (7 letras por fila)
+
         camposBotones = [
             [campo0, campo1, campo2, campo3, campo4, campo5, campo6],
             [campo7, campo8, campo9, campo10, campo11, campo12, campo13],
@@ -116,13 +114,10 @@ class HardModeViewController: UIViewController {
             [campo21, campo22, campo23, campo24, campo25, campo26, campo27]
         ]
         
-        // La música se configurará en viewWillAppear
         configurarJuego()
     }
     
-    // MARK: - Configuración del juego
     func configurarJuego() {
-        // Seleccionar palabra aleatoria
         palabraActual = bancoPalabras.randomElement() ?? "EJEMPLO"
         intentoActual = 0
         posicionLetra = 0
@@ -130,16 +125,13 @@ class HardModeViewController: UIViewController {
         tiempoInicio = Date()
         puntajeActual = 0
         vidasRestantes = 3
-        
-        // Mostrar todas las vidas
+
         vida1.isHidden = false
         vida2.isHidden = false
         vida3.isHidden = false
-        
-        // Actualizar puntaje
+
         puntaje.text = "0"
-        
-        // Limpiar todos los campos
+
         limpiarCampos()
         reiniciarTeclado()
     }
@@ -170,7 +162,6 @@ class HardModeViewController: UIViewController {
         }
     }
     
-    // MARK: - Acciones del teclado
     @IBAction func teclaPresionada(_ sender: UIButton) {
         AudioManager.shared.reproducirSonido("musicaBotones")
         guard intentoActual < 4, posicionLetra < 7 else { return }
@@ -192,7 +183,6 @@ class HardModeViewController: UIViewController {
     
     @IBAction func subirRespuesta(_ sender: UIButton) {
         AudioManager.shared.reproducirSonido("musicaBotones")
-        // Validar que se hayan ingresado 7 letras
         guard palabraUsuario.count == 7 else {
             mostrarAlerta(titulo: "Incompleto", mensaje: "Debes ingresar 7 letras")
             return
@@ -200,15 +190,13 @@ class HardModeViewController: UIViewController {
         
         verificarPalabra()
     }
-    
-    // MARK: - Verificación de palabra
+
     func verificarPalabra() {
         var aciertos = 0
         var palabraActualArray = Array(palabraActual)
         var palabraUsuarioArray = Array(palabraUsuario)
         var colores = [UIColor?](repeating: nil, count: 7)
         
-        // Primera pasada: verificar letras en posición correcta (verde)
         for i in 0..<7 {
             if palabraUsuarioArray[i] == palabraActualArray[i] {
                 colores[i] = UIColor(hex: "#C6FFB6")
@@ -216,10 +204,8 @@ class HardModeViewController: UIViewController {
             }
         }
         
-        // Segunda pasada: verificar si la letra existe en la palabra (amarillo o gris)
         for i in 0..<7 {
-            if colores[i] == nil {  // Si no está verde
-                // Verificar si la letra existe en alguna parte de la palabra
+            if colores[i] == nil {
                 if palabraActualArray.contains(palabraUsuarioArray[i]) {
                     colores[i] = UIColor(hex: "#FFEEB6")
                 } else {
@@ -227,27 +213,22 @@ class HardModeViewController: UIViewController {
                 }
             }
         }
-        
-        // Aplicar colores a los campos
+
         for i in 0..<7 {
             if let color = colores[i] {
                 camposBotones[intentoActual][i].backgroundColor = color
             }
         }
-        
-        // Actualizar teclado: agrupar colores por letra
+ 
         var coloresPorLetra: [Character: UIColor] = [:]
         for i in 0..<7 {
             let letra = palabraUsuarioArray[i]
             let color = colores[i]!
             
-            // Prioridad: Verde > Amarillo > Gris
             if let colorExistente = coloresPorLetra[letra] {
                 if color == UIColor(hex: "#C6FFB6") {
-                    // Verde siempre tiene prioridad
                     coloresPorLetra[letra] = color
                 } else if color == UIColor(hex: "#FFEEB6") && colorExistente != UIColor(hex: "#C6FFB6") {
-                    // Amarillo tiene prioridad sobre gris
                     coloresPorLetra[letra] = color
                 }
             } else {
@@ -255,12 +236,10 @@ class HardModeViewController: UIViewController {
             }
         }
         
-        // Aplicar colores al teclado
         for (letra, color) in coloresPorLetra {
             cambiarColorTecla(letra: String(letra), color: color)
         }
-        
-        // Reproducir sonidos según el resultado
+
         let tieneVerde = colores.contains(where: { $0 == UIColor(hex: "#C6FFB6") })
         let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
         
@@ -269,8 +248,7 @@ class HardModeViewController: UIViewController {
         } else {
             AudioManager.shared.reproducirSonido("error", volumen: 0.6)
         }
-        
-        // Verificar si ganó
+
         if aciertos == 7 {
             juegoGanado()
         } else {
@@ -278,7 +256,6 @@ class HardModeViewController: UIViewController {
             posicionLetra = 0
             palabraUsuario = ""
             
-            // Verificar si perdió todos los intentos
             if intentoActual >= 4 {
                 perderVida()
             }
@@ -300,12 +277,10 @@ class HardModeViewController: UIViewController {
         
         for tecla in teclas {
             if tecla?.currentTitle == letra {
-                // Solo cambiar a verde si está verde, mantener verde sobre amarillo
                 if color == colorVerde {
                     tecla?.backgroundColor = color
                 } else if tecla?.backgroundColor != colorVerde {
                     tecla?.backgroundColor = color
-                    // Deshabilitar la tecla si es gris
                     if color == colorGris {
                         tecla?.isEnabled = false
                     }
@@ -315,7 +290,6 @@ class HardModeViewController: UIViewController {
         }
     }
     
-    // MARK: - Lógica de juego
     func juegoGanado() {
         AudioManager.shared.detenerMusica()
         AudioManager.shared.reproducirSonido("musicaGanador", volumen: 0.6)
@@ -325,13 +299,10 @@ class HardModeViewController: UIViewController {
         let mensaje = "¡Felicidades! Adivinaste en \(intentoActual + 1) intentos.\nTiempo: \(tiempoTranscurrido)s\nPuntaje: \(puntajeActual)"
         
         mostrarAlerta(titulo: "¡Victoria!", mensaje: mensaje) {
-            // Guardar el puntaje en variable global antes de reiniciar
+
             puntajeParaGuardarHard = self.puntajeActual
             
-            // Reiniciar el juego
             self.configurarJuego()
-            
-            // Ir a la pantalla de nombre
             self.irAPantallaDeNombre()
         }
     }
@@ -357,13 +328,10 @@ class HardModeViewController: UIViewController {
         case 0:
             vida3.isHidden = true
             mostrarAlerta(titulo: "Game Over", mensaje: "Perdiste todas tus vidas.\nPuntaje final: \(puntajeActual)") {
-                // Guardar el puntaje en variable global antes de reiniciar
+
                 puntajeParaGuardarHard = self.puntajeActual
-                
-                // Reiniciar el juego
+
                 self.configurarJuego()
-                
-                // Ir a la pantalla de nombre
                 self.irAPantallaDeNombre()
             }
         default:
@@ -372,7 +340,7 @@ class HardModeViewController: UIViewController {
     }
     
     func reiniciarIntento() {
-        // Cambiar a una nueva palabra
+
         let palabraAnterior = palabraActual
         repeat {
             palabraActual = bancoPalabras.randomElement() ?? "EJEMPLO"
@@ -382,21 +350,15 @@ class HardModeViewController: UIViewController {
         posicionLetra = 0
         palabraUsuario = ""
         tiempoInicio = Date()
-        
-        // Limpiar campos y reiniciar teclado
         limpiarCampos()
         reiniciarTeclado()
     }
     
     func calcularPuntaje() {
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
-        
-        // Puntos base por intentos (menos intentos = más puntos) - más puntos que modo clásico
+  
         let puntosPorIntentos = (4 - intentoActual) * 100
-        
-        // Puntos por tiempo (más rápido = más puntos)
         let puntosPorTiempo = max(0, 200 - tiempoTranscurrido)
-        
         let puntosGanados = puntosPorIntentos + puntosPorTiempo
         puntajeActual += puntosGanados
         
@@ -414,8 +376,6 @@ class HardModeViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Alertas
     func mostrarAlerta(titulo: String, mensaje: String, completado: (() -> Void)? = nil) {
         let alerta = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
         let accion = UIAlertAction(title: "Aceptar", style: .default) { _ in
@@ -429,8 +389,7 @@ class HardModeViewController: UIViewController {
         super.viewWillAppear(animated)
         
         AudioManager.shared.reproducirMusicaJuego()
-        
-        // Conectar acciones de las teclas
+
         let teclas = [
             teclaQ, teclaW, teclaE, teclaR, teclaT,
             teclaY, teclaU, teclaI, teclaO, teclaP,

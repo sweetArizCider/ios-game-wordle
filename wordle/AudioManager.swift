@@ -15,13 +15,12 @@ class AudioManager {
     private var reproductorSonido: AVAudioPlayer?
     
     private init() {}
-    
-    // MARK: - Música de fondo
+
     func reproducirMusicaMenu() {
         detenerMusica()
         
         guard let url = Bundle.main.url(forResource: "musicaMenu", withExtension: "mp3") else {
-            print("⚠️ No se encontró musicaMenu.mp3")
+            print("No se encontró musicaMenu.mp3")
             return
         }
         
@@ -31,7 +30,7 @@ class AudioManager {
             reproductorMusica?.volume = 0.3
             reproductorMusica?.play()
         } catch {
-            print("⚠️ Error al reproducir música de menú: \(error.localizedDescription)")
+            print("Error al reproducir música de menú: \(error.localizedDescription)")
         }
     }
     
@@ -39,7 +38,7 @@ class AudioManager {
         detenerMusica()
         
         guard let url = Bundle.main.url(forResource: "musicaJuego", withExtension: "mp3") else {
-            print("⚠️ No se encontró musicaJuego 2.mp3")
+            print("No se encontró musicaJuego 2.mp3")
             return
         }
         
@@ -49,7 +48,7 @@ class AudioManager {
             reproductorMusica?.volume = 0.3
             reproductorMusica?.play()
         } catch {
-            print("⚠️ Error al reproducir música de juego: \(error.localizedDescription)")
+            print("Error al reproducir música de juego: \(error.localizedDescription)")
         }
     }
     
@@ -58,10 +57,9 @@ class AudioManager {
         reproductorMusica = nil
     }
     
-    // MARK: - Efectos de sonido
     func reproducirSonido(_ nombreArchivo: String, volumen: Float = 0.5) {
         guard let url = Bundle.main.url(forResource: nombreArchivo, withExtension: "mp3") else {
-            print("⚠️ No se encontró \(nombreArchivo).mp3")
+            print("No se encontró \(nombreArchivo).mp3")
             return
         }
         
@@ -70,7 +68,7 @@ class AudioManager {
             reproductorSonido?.volume = volumen
             reproductorSonido?.play()
         } catch {
-            print("⚠️ Error al reproducir \(nombreArchivo): \(error.localizedDescription)")
+            print("Error al reproducir \(nombreArchivo): \(error.localizedDescription)")
         }
     }
 }

@@ -8,16 +8,13 @@
 import UIKit
 import AVFoundation
 
-// Variable global para almacenar los records de los jugadores
 var records: [(nombre: String, puntaje: Int)] = [] {
     didSet {
-        // Guardar en UserDefaults cada vez que cambie
         guardarRecords()
     }
 }
 var puntajeParaGuardar: Int = 0
 
-// MARK: - Funciones para persistencia de datos
 func guardarRecords() {
     let recordsData = records.map { ["nombre": $0.nombre, "puntaje": $0.puntaje] }
     UserDefaults.standard.set(recordsData, forKey: "wordleRecords")
@@ -122,22 +119,18 @@ class ClassicModeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Inicializar el arreglo de botones por fila
+ 
         camposBotones = [
             [campo0, campo1, campo2, campo3, campo4],
             [campo5, campo6, campo7, campo8, campo9],
             [campo10, campo11, campo12, campo13, campo14],
             [campo15, campo16, campo17, campo18, campo19]
         ]
-        
-        // La música se configurará en viewWillAppear
+
         configurarJuego()
     }
-    
-    // MARK: - Configuración del juego
+
     func configurarJuego() {
-        // Seleccionar palabra aleatoria
         palabraActual = bancoPalabras.randomElement() ?? "GATOS"
         intentoActual = 0
         posicionLetra = 0
@@ -146,15 +139,12 @@ class ClassicModeViewController: UIViewController {
         puntajeActual = 0
         vidasRestantes = 3
         
-        // Mostrar todas las vidas
         vida1.isHidden = false
         vida2.isHidden = false
         vida3.isHidden = false
-        
-        // Actualizar puntaje
+
         puntaje.text = "0"
-        
-        // Limpiar todos los campos
+
         limpiarCampos()
         reiniciarTeclado()
     }
@@ -184,8 +174,7 @@ class ClassicModeViewController: UIViewController {
             tecla?.isEnabled = true
         }
     }
-    
-    // MARK: - Acciones del teclado
+
     @IBAction func teclaPresionada(_ sender: UIButton) {
         AudioManager.shared.reproducirSonido("musicaBotones")
         guard intentoActual < 4, posicionLetra < 5 else { return }
@@ -207,7 +196,6 @@ class ClassicModeViewController: UIViewController {
     
     @IBAction func subirRespuesta(_ sender: UIButton) {
         AudioManager.shared.reproducirSonido("musicaBotones")
-        // Validar que se hayan ingresado 5 letras
         guard palabraUsuario.count == 5 else {
             mostrarAlerta(titulo: "Incompleto", mensaje: "Debes ingresar 5 letras")
             return
@@ -215,26 +203,22 @@ class ClassicModeViewController: UIViewController {
         
         verificarPalabra()
     }
-    
-    // MARK: - Verificación de palabra
+
     func verificarPalabra() {
         var aciertos = 0
         var palabraActualArray = Array(palabraActual)
         var palabraUsuarioArray = Array(palabraUsuario)
         var colores = [UIColor?](repeating: nil, count: 5)
-        
-        // Primera pasada: verificar letras en posición correcta (verde)
+
         for i in 0..<5 {
             if palabraUsuarioArray[i] == palabraActualArray[i] {
                 colores[i] = UIColor(hex: "#C6FFB6")
                 aciertos += 1
             }
         }
-        
-        // Segunda pasada: verificar si la letra existe en la palabra (amarillo o gris)
+
         for i in 0..<5 {
-            if colores[i] == nil {  // Si no está verde
-                // Verificar si la letra existe en alguna parte de la palabra
+            if colores[i] == nil {
                 if palabraActualArray.contains(palabraUsuarioArray[i]) {
                     colores[i] = UIColor(hex: "#FFEEB6")
                 } else {
@@ -242,41 +226,35 @@ class ClassicModeViewController: UIViewController {
                 }
             }
         }
-        
-        // Aplicar colores a los campos
+
         for i in 0..<5 {
             if let color = colores[i] {
                 camposBotones[intentoActual][i].backgroundColor = color
             }
         }
-        
-        // Actualizar teclado: agrupar colores por letra
+
         var coloresPorLetra: [Character: UIColor] = [:]
         for i in 0..<5 {
             let letra = palabraUsuarioArray[i]
             let color = colores[i]!
             
-            // Prioridad: Verde > Amarillo > Gris
             if let colorExistente = coloresPorLetra[letra] {
                 if color == UIColor(hex: "#C6FFB6") {
-                    // Verde siempre tiene prioridad
                     coloresPorLetra[letra] = color
                 } else if color == UIColor(hex: "#FFEEB6") && colorExistente != UIColor(hex: "#C6FFB6") {
-                    // Amarillo tiene prioridad sobre gris
                     coloresPorLetra[letra] = color
                 }
-                // Si ya es gris, solo mantenerlo si no hay otros colores
+
             } else {
                 coloresPorLetra[letra] = color
             }
         }
-        
-        // Aplicar colores al teclado
+
         for (letra, color) in coloresPorLetra {
             cambiarColorTecla(letra: String(letra), color: color)
         }
         
-        // Reproducir sonidos según el resultado
+
         let tieneVerde = colores.contains(where: { $0 == UIColor(hex: "#C6FFB6") })
         let tieneAmarillo = colores.contains(where: { $0 == UIColor(hex: "#FFEEB6") })
         
@@ -285,16 +263,14 @@ class ClassicModeViewController: UIViewController {
         } else {
             AudioManager.shared.reproducirSonido("error", volumen: 0.6)
         }
-        
-        // Verificar si ganó
+
         if aciertos == 5 {
             juegoGanado()
         } else {
             intentoActual += 1
             posicionLetra = 0
             palabraUsuario = ""
-            
-            // Verificar si perdió todos los intentos
+
             if intentoActual >= 4 {
                 perderVida()
             }
@@ -316,12 +292,11 @@ class ClassicModeViewController: UIViewController {
         
         for tecla in teclas {
             if tecla?.currentTitle == letra {
-                // Solo cambiar a verde si está verde, mantener verde sobre amarillo
+
                 if color == colorVerde {
                     tecla?.backgroundColor = color
                 } else if tecla?.backgroundColor != colorVerde {
                     tecla?.backgroundColor = color
-                    // Deshabilitar la tecla si es gris
                     if color == colorGris {
                         tecla?.isEnabled = false
                     }
@@ -330,8 +305,7 @@ class ClassicModeViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Lógica de juego
+
     func juegoGanado() {
         AudioManager.shared.detenerMusica()
         AudioManager.shared.reproducirSonido("musicaGanador", volumen: 0.6)
@@ -342,13 +316,10 @@ class ClassicModeViewController: UIViewController {
         
         mostrarAlerta(titulo: "¡Victoria!", mensaje: mensaje) {
             AudioManager.shared.reproducirMusicaJuego()
-            // Guardar el puntaje en variable global antes de reiniciar
+
             puntajeParaGuardar = self.puntajeActual
             
-            // Reiniciar el juego
             self.configurarJuego()
-            
-            // Ir a la pantalla de nombre
             self.irAPantallaDeNombre()
         }
     }
@@ -374,13 +345,9 @@ class ClassicModeViewController: UIViewController {
         case 0:
             vida3.isHidden = true
             mostrarAlerta(titulo: "Game Over", mensaje: "Perdiste todas tus vidas.\nPuntaje final: \(puntajeActual)") {
-                // Guardar el puntaje en variable global antes de reiniciar
+
                 puntajeParaGuardar = self.puntajeActual
-                
-                // Reiniciar el juego
                 self.configurarJuego()
-                
-                // Ir a la pantalla de nombre
                 self.irAPantallaDeNombre()
             }
         default:
@@ -389,7 +356,6 @@ class ClassicModeViewController: UIViewController {
     }
     
     func reiniciarIntento() {
-        // Cambiar a una nueva palabra
         let palabraAnterior = palabraActual
         repeat {
             palabraActual = bancoPalabras.randomElement() ?? "GATOS"
@@ -399,8 +365,6 @@ class ClassicModeViewController: UIViewController {
         posicionLetra = 0
         palabraUsuario = ""
         tiempoInicio = Date()
-        
-        // Limpiar campos y reiniciar teclado
         limpiarCampos()
         reiniciarTeclado()
     }
@@ -408,10 +372,8 @@ class ClassicModeViewController: UIViewController {
     func calcularPuntaje() {
         let tiempoTranscurrido = Int(Date().timeIntervalSince(tiempoInicio ?? Date()))
         
-        // Puntos base por intentos (menos intentos = más puntos)
         let puntosPorIntentos = (4 - intentoActual) * 50
         
-        // Puntos por tiempo (más rápido = más puntos)
         let puntosPorTiempo = max(0, 100 - tiempoTranscurrido)
         
         let puntosGanados = puntosPorIntentos + puntosPorTiempo
@@ -431,8 +393,7 @@ class ClassicModeViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Alertas
+
     func mostrarAlerta(titulo: String, mensaje: String, completado: (() -> Void)? = nil) {
         let alerta = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
         let accion = UIAlertAction(title: "Aceptar", style: .default) { _ in
@@ -446,8 +407,7 @@ class ClassicModeViewController: UIViewController {
         super.viewWillAppear(animated)
         
         AudioManager.shared.reproducirMusicaJuego()
-        
-        // Conectar acciones de las teclas
+
         let teclas = [
             teclaQ, teclaW, teclaE, teclaR, teclaT,
             teclaY, teclaU, teclaI, teclaO, teclaP,
@@ -471,7 +431,6 @@ class ClassicModeViewController: UIViewController {
 
 }
 
-// MARK: - Extensión UIColor para colores hex
 extension UIColor {
     convenience init(hex: String) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)

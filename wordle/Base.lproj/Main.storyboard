@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W9t-lO-PpZ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cz-gO-5GO">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="reD-eJ-pRz">
                                         <rect key="frame" x="19.666666666666657" y="85" width="353.66666666666674" height="100"/>
@@ -64,7 +64,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-1S-isf">
-                                        <rect key="frame" x="61.666666666666657" y="465.66666666666663" width="270" height="56"/>
+                                        <rect key="frame" x="61.666666666666657" y="465.66666666666669" width="270" height="56.000000000000057"/>
                                         <color key="backgroundColor" red="1" green="0.93333333330000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="XSa-Qp-eFV"/>
@@ -4709,7 +4709,58 @@ Pamela Robledo Pinto
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyr-rR-VMU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-995" y="-103"/>
+            <point key="canvasLocation" x="834" y="836"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="uXX-5V-b5S">
+            <objects>
+                <viewController id="W9t-lO-PpZ" customClass="SplashViewController" customModule="wordle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dxr-1W-SiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Captura de pantalla 2025-12-01 192004.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zoz-w6-Yhd">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXS-IB-EHI">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-Wt-Wsd">
+                                        <rect key="frame" x="39.333333333333343" y="233.33333333333334" width="314.33333333333326" height="292.33333333333326"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bAT-Wt-Wsd" secondAttribute="height" multiplier="259:241" id="2K6-eT-DFc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="d24-hT-yKN"/>
+                                <constraints>
+                                    <constraint firstItem="bAT-Wt-Wsd" firstAttribute="width" secondItem="SXS-IB-EHI" secondAttribute="width" multiplier="0.8" id="apH-ai-M1q"/>
+                                    <constraint firstItem="bAT-Wt-Wsd" firstAttribute="centerY" secondItem="SXS-IB-EHI" secondAttribute="centerY" id="sUW-iJ-4OQ"/>
+                                    <constraint firstItem="bAT-Wt-Wsd" firstAttribute="centerX" secondItem="SXS-IB-EHI" secondAttribute="centerX" id="tbp-RD-tcX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bR3-Ix-CO1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zoz-w6-Yhd" firstAttribute="top" secondItem="dxr-1W-SiJ" secondAttribute="top" id="3LP-Ct-T5n"/>
+                            <constraint firstItem="Zoz-w6-Yhd" firstAttribute="leading" secondItem="bR3-Ix-CO1" secondAttribute="leading" id="9FW-gf-hnZ"/>
+                            <constraint firstItem="bR3-Ix-CO1" firstAttribute="trailing" secondItem="Zoz-w6-Yhd" secondAttribute="trailing" id="Dyc-un-dVz"/>
+                            <constraint firstItem="bR3-Ix-CO1" firstAttribute="bottom" secondItem="SXS-IB-EHI" secondAttribute="bottom" id="Fz5-vu-KqA"/>
+                            <constraint firstItem="SXS-IB-EHI" firstAttribute="top" secondItem="bR3-Ix-CO1" secondAttribute="top" id="I2g-u0-UY3"/>
+                            <constraint firstItem="bR3-Ix-CO1" firstAttribute="trailing" secondItem="SXS-IB-EHI" secondAttribute="trailing" id="Z9M-kz-yWi"/>
+                            <constraint firstItem="SXS-IB-EHI" firstAttribute="leading" secondItem="bR3-Ix-CO1" secondAttribute="leading" id="cmp-gu-mnE"/>
+                            <constraint firstAttribute="bottom" secondItem="Zoz-w6-Yhd" secondAttribute="bottom" id="j1n-Sx-gcT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgSplash" destination="bAT-Wt-Wsd" id="Bwq-jW-tuL"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="sgSplash" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="giH-wB-ukY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDm-A6-74h" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="-51"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -4721,6 +4772,7 @@ Pamela Robledo Pinto
         <image name="Captura_de_pantalla_2025-12-01_191754-removebg-preview.png" width="910" height="274"/>
         <image name="Captura_de_pantalla_2025-12-02_131514-removebg-preview.png" width="330" height="308"/>
         <image name="Captura_de_pantalla_2025-12-02_133335-removebg-preview.png" width="186" height="132"/>
+        <image name="Captura_de_pantalla_2025-12-05_a_la_s__12.35.31_p.m.-removebg-preview.png" width="518" height="482"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
